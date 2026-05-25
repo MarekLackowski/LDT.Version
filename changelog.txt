@@ -1,4 +1,10 @@
---> 1.4.3 <--
+--> 1.4.4 <--
+
+- "Update Available" now opens changelog window before updating
+- Barcode button next to Serial in QuickSpecs – opens scannable barcode window
+- Arrow keys added to Keyboard Test layout (▲ ► ▼ ◄)
+
+-- 1.4.3 --
 
 - Live Device Monitor in Diagnostics tab – detects USB, mouse, keyboard, audio, network with smart grouping
 
