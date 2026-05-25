@@ -1,0 +1,228 @@
+--> 1.4.3 <--
+
+- Live Device Monitor in Diagnostics tab – detects USB, mouse, keyboard, audio, network with smart grouping
+
+-- 1.4.2 --
+
+- Added post pinning (📌) – Admin/Moderator/Supervisor can pin important posts
+- Pinned posts appear in a dedicated right-side panel with compact miniatures
+- Pinned post miniatures show author tier color, type badge, and group tags
+- Notification system – badge on Service Board button shows unread post count
+- Notification color reflects the highest-priority unread post
+- New posts marked with "NEW" badge on first visit
+- Read tracking per user – posts marked read only when entering Service Board
+- Delete post now also clears pinned status column
+
+- Added post editing (✏️ button) – Admin/Moderator/Supervisor/Basic can edit own posts
+- Added user editing (✏️ button in User Management) – change tier, groups, password
+- Protected groups (Trial, Basic, Supervisor, Moderator, Admin) are automatic and hidden from non-Admin
+- Post type dropdown now only shows allowed types based on user tier
+- Fixed moderator seeing Trial-group posts
+- Fixed company field disappearing when editing users as non-Admin
+- Side menu buttons are now smaller and better fitting for smaller displays
+- New "edited" timestamp when post is modified
+
+--// 1.4.1 //--
+
+- NEW ACCOUNTS AND MESSAGE BOARD SYSTEM!
+- Fixed update forcer running updater multiple times
+- Analytics now uses network time instead of local system time
+- Device ID now uses USB volume serial number instead of generated file
+- Replaced HTTP ping internet check with native Windows NCSI (Network Connectivity Status Indicator)
+- No more background HTTP requests for connectivity checks
+- Fixed intermittent offline flickering on Board/Account tabs
+- Redesigned Account view – removed TabControl, simplified to two action buttons
+- Added self-inflicted password change
+
+-- 1.3.2 --
+
+- Fixed trial ended screen: "Launch in Trial Version" button now visible and restarts app in trial mode
+- Multiple bugs fixed
+- Added more licence verification trackers
+
+--// 1.3.1 //--
+
+- Added license system with key activation, 300-launch trial mode, and online validation
+- Fixed position of  Battery Panel in Database View
+- Added modal overlay with smooth fade animation when dialog windows are open
+- Overlay automatically appears/disappears based on active modal windows
+- Added critical update forcer thet forces update if current version is lower than required version
+- fixed the bug with what's new screen
+- fixed problems with License Window
+
+-- 1.2.4 --
+
+- Added battery panel to Repair Database view
+- Redesigned table view button with blue theme
+- Autopilot check now waits for internet connection, shows "No Network" (yellow) when offline
+- Added Network Status indicator in bottom bar with live internet detection
+- Renamed Server Status to Database Status
+- Added Network Speed Test utility (powered by Ookla Speedtest CLI)
+- Shows live progress and final results (ping, download Mbps, upload Mbps)
+
+-- 1.2.3 --
+
+- Added Live Input panel in Keyboard Test showing scan code and VK code for each keypress
+- Live Input panel flashes green on keypress
+- Added right Windows key to keyboard layout, removed Menu key
+- Fixed Autopilot detected state colors in QuickSpecs (now red like other detected values)
+- Added "Enable Local Database (beta)" button in Repair Database access window
+- Local database creates LDT_Database folder with repairs.json in app directory
+- When local mode is active, no password prompt on entering Repair Database
+- Server Status correctly reflects local file existence
+- Local database auto-creates if missing, with backup recovery option on save
+- Added blue circular help buttons for Reject Reason, Actions Taken, Materials Used (local mode only)
+  Bugfixes: 
+- Help windows now highlight separator format (dot for reasons, slash for actions/materials) with visual examples
+- Help buttons excluded from Tab navigation
+
+-- 1.2.1 --
+
+- Fixed Camera Test green border now showing correctly on both mouse click and hotkey
+- Moved Update notification from QuickSpecs panel to left sidebar menu
+- Update button color changes based on version gap: green (1 step), orange (2-3 steps), red (4+ steps)
+- QuickSpecs panel now properly centered vertically
+- Restart as Admin now auto-launches Driver Install after elevation
+- Fixed progress label width in Driver Update window to prevent bar jumping
+
+--// 1.2 //--
+
+- Redesigned Audio Test window with dark theme, rounded corners and custom title bar
+- Input/Output level bars now wider with percentage display
+- Microphone sensitivity boosted 4x for better visual feedback
+- Redesigned Close buttons in Mouse Test and Screen Test windows to match dark theme
+- Memory info now shows DDR type (DDR3/DDR4/DDR5) via SMBIOS in QuickSpecs
+- Redesigned Driver Update window with dark theme, progress bar and live logs
+- New PowerShell script: installs drivers one by one with per-driver progress reporting
+- Progress bar divided equally per driver (0-25% searching, 25-100% per-driver steps)
+- Driver count shown as (current/total) without driver names
+- Removed ReadKey pauses – process ends cleanly without timeout
+- Added Restart as Admin button when admin privileges missing
+- Added Restart Now button when reboot required after installation
+
+-- 1.1.8 --
+
+- Redesigned Driver Update window
+- Removed "Include quickspecs" checkbox – quickspecs are now automatically saved only when the entered serial matches the detected device serial; different serial = specs saved as "-"
+- Removed green border from installed utility cards – only "Installed" text remains green, border stays default gray
+
+-- 1.1.7 --
+
+- Fixed utility installation detection – download path now matches the search path in Utilities folder
+- Added 1-second loading animation before camera initialization in Camera Test
+- Made mouse test and touch test green borders persistent across tab switching
+- Experimental: Reject Reason autocomplete now cycles through suggestions every 2 keystrokes based on frequency (most common first, then next most common, etc.)
+
+-- 1.1.6 --
+
+- Prevented dot key (.) from being captured by dev menu while typing in Repair Database text fields
+- Fixed Reset button in Repair Database to restore QuickSpecs panel to local machine specs instead of keeping loaded record data
+- Update Button updated and moved to Diagnostics View
+
+-- 1.1.5 --
+
+- New design for Search Result Cards
+- Generating raport now ignores time and only shows date of generation
+- New hidden Numpad layout in keyboard test
+
+-- 1.1.4 --
+
+- Bugfixes related to touchscreen test and keyboard test
+
+--  1.1.3 --
+
+- Added new Touch Screen Test
+- New test will only be accesible if the device is recognised as touch device
+- Adjusted battery percentage according to company standards
+- Fixed detecting keyboard with numpad
+
+-- 1.1.2 --
+
+- Complete keyboard test redesign with dynamic layout detection
+- Added automatic numpad detection
+- Added system languages display
+- Keyboard test now adapts layout based on detected keyboard type
+- Added separate numpad section positioned to the right of main keyboard
+- Added custom close button (X) with hover effect to all custom windows
+
+-- 1.1.1 --
+
+- If battery Health is unknown, this fact will get properly displayed
+- Fixed freezes caused by camera closing arguments
+- Fixed buttons in Repair DB Authentification Window
+
+--// 1.1 //--
+
+- Complete UI redesign with dark theme across all windows and dialogs
+- Replaced all MessageBox dialogs with custom-styled notifications and confirmations (success, error, warning, yes/no)
+- Added smooth animations to all custom dialogs
+- Applied dark theme to Repair Database view with proper ComboBox selection display
+- Removed intrusive blue focus borders from menu and test buttons
+- Fixed camera not stopping when switching tabs
+- Fixed ComboBox not showing selected value in Repair Database
+- Fixed keyboard shortcuts (Shift+1-4) for tab navigation
+- Fixed menu button colors being overwritten at runtime
+
+-- 1.0.8 --
+
+- Fixed audio test playback – sound now restarts from beginning when Play is pressed after completion, and Stop button fully resets the audio position
+- Replaced battery serial number display with battery health condition
+- Battery condition now color-coded: green (≥85%), yellow (45-84%), red (<45%)
+- Battery panel background changes color according to condition for better visual feedback
+- Fixed battery voltage display positioning – now correctly shown next to remaining time
+- Battery health refreshes every 30 seconds to minimize system overhead
+
+-- 1.0.7 --
+
+- Diagnostics view now uses Viewbox with two‑way scaling
+- Right panel (QuickSpecs) also switched to Viewbox with DownOnly scaling – prevents content from being cut off on smaller displays
+- Reduced minimum window height from 750 to 650 to better fit laptop screens without overlapping taskbar
+- Adjusted layout margins and paddings in Diagnostics view for a more compact, balanced appearance
+- Camera selection combobox is now always fully visible, no longer clipped at the bottom of the view
+
+-- 1.0.6 --
+
+- Fixed a bug causing unnecessary focus on contents of Utilities tab
+- Centered all label text vertically in QuickSpecs panel 
+- Fixed camera loading animation – now properly displays 3-second loading animation on first camera start, with smooth transitions on subsequent uses
+
+-- 1.0.5 --
+
+- Fixed progress bar behavior in Driver Update window – now smoothly transitions through phases: scanning (0-30%), downloading (30-60%), installing (60-95%), and completion (95-100%)
+- Added several security based features
+
+-- 1.0.4 --
+
+- Added serial number display to QuickSpecs panel
+- Minor bugfixes
+- Fixed WMI query in InstalledDriversWindow
+
+-- 1.0.3 --
+
+- Improved driver installation script and added visual support
+- Fixed a bug in keyboard test preventing users from using keyboard after closing test window with mouse input
+
+-- 1.0.2 --
+
+- Added WinDirStat utility
+- Added autocomplete for Actions Taken and Materials Used fields in Repair Database
+- Added support for longer patchnotes
+
+-- 1.0.1 --
+
+- Added HWiNFO utility card
+- Fixed icon generation for main executable – now uses multi‑resolution .ico file (16, 32, 64px) for proper display in Windows Explorer and taskbar
+- Refined card click animation – scaling effect now triggers only on double‑click, not on single click, for both Utilities and Script Library cards
+
+-- 1.0.0 --
+
+- Added Utilities tab with downloadable tools (Fan Control and OCCT now only, more coming in the future) – cards show installed status, download on demand with progress window
+- Utilities card icons are grayed out when tool not installed, fully visible when installed
+- Installer now includes optional utilities with checkbox selection
+- Installation progress bar now smoothly animates and shows real download size in MB
+- Removed unnecessary start menu shortcut creation from installer
+- Removed admin restart requirement – installer now handles permission issues gracefully
+- Camera test now shows loading animation while starting camera
+- Redesigned exit confirmation dialog – cleaner layout with centered text and buttons, improved readability
+- Password dialog (Repair Database Auth) now has centered text input and styled buttons with hover/focus effects
+- All action buttons (Print Label, Print Report, Confirm, Update) now have consistent visual feedback
