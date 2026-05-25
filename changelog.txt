@@ -1,23 +1,6 @@
 --> 1.4.3 <--
 
 - Live Device Monitor in Diagnostics tab – detects USB, mouse, keyboard, audio, network with smart grouping
-- Added post pinning (📌) – Admin/Moderator/Supervisor can pin important posts
-- Pinned posts appear in a dedicated right-side panel with compact miniatures
-- Pinned post miniatures show author tier color, type badge, and group tags
-- Notification system – badge on Service Board button shows unread post count
-- Notification color reflects the highest-priority unread post
-- New posts marked with "NEW" badge on first visit
-- Read tracking per user – posts marked read only when entering Service Board
-- Delete post now also clears pinned status column
-
-- Added post editing (✏️ button) – Admin/Moderator/Supervisor/Basic can edit own posts
-- Added user editing (✏️ button in User Management) – change tier, groups, password
-- Protected groups (Trial, Basic, Supervisor, Moderator, Admin) are automatic and hidden from non-Admin
-- Post type dropdown now only shows allowed types based on user tier
-- Fixed moderator seeing Trial-group posts
-- Fixed company field disappearing when editing users as non-Admin
-- Side menu buttons are now smaller and better fitting for smaller displays
-- New "edited" timestamp when post is modified
 
 -- 1.4.2 --
 
