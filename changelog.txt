@@ -1,4 +1,10 @@
---> 1.4.4 <--
+--> 1.4.5 <--
+
+- Board and Account views now scale properly on different screen sizes (Viewbox added)
+- Script Library now supports .psm1 (PowerShell modules) – auto-import and run
+- Added BIOS Info utility – displays all BIOS settings with search and color-coded values
+
+-- 1.4.4 --
 
 - "Update Available" now opens changelog window before updating
 - Barcode button next to Serial in QuickSpecs – opens scannable barcode window
