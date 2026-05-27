@@ -1,4 +1,13 @@
---> 1.4.6 <--
+--> 1.4.7 <--
+
+- Fixed buttons on bottom bar
+- Board posts now sorted by date (newest first), not by spreadsheet row order
+- Notification badge now correctly reflects unread posts after entering Board
+- Badge no longer flashes wrong count on startup
+- Board scroll fixed after layout change
+- Target group selection now uses clickable styled tags instead of manual text input
+
+-- 1.4.6 --
 
 - Fixed a bug causing constant pings about new posts, now read posts are automatically saved as read
 - Touch Test: overlays no longer block touch – squares always accessible
