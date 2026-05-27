@@ -1,4 +1,13 @@
---> 1.4.5 <--
+--> 1.4.6 <--
+
+- Fixed a bug causing constant pings about new posts, now read posts are automatically saved as read
+- Touch Test: overlays no longer block touch – squares always accessible
+- Login shortcuts (Shift+5/Shift+6) now blocked when offline
+- License company name now loads immediately when internet becomes available
+- Enter key now activates license and logs in (no need to click buttons)
+- Diagnostics buttons moved to dedicated bottom bar
+
+-- 1.4.5 --
 
 - Board and Account views now scale properly on different screen sizes (Viewbox added)
 - Script Library now supports .psm1 (PowerShell modules) – auto-import and run
