@@ -1,4 +1,12 @@
---> 1.4.7 <--
+--> 1.4.8 <--
+
+- Screen Test: Tab key now switches between multiple monitors
+- Driver update log now filters out separator lines
+- Install Drivers now checks internet connection
+- Fixed ESC key in exit dialog causing crash when focused on Cancel button
+- Engine fixes
+
+-- 1.4.7 --
 
 - Fixed buttons on bottom bar
 - Board posts now sorted by date (newest first), not by spreadsheet row order
