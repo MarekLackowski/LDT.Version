@@ -1,4 +1,10 @@
---> 1.4.9 <--
+--> 1.5.0 <--
+
+- Audio Test and Keyboard Test windows can now be dragged to move them
+- Install Drivers now accessible via hotkey [8]
+- What's New overlay can now be closed with mouse click (not just keyboard)
+
+-- 1.4.9 --
 
 - Screen Test: long touch no longer changes color (only short taps)
 - Adjusted font size for Diagnostic Buttons
