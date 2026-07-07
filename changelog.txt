@@ -1,4 +1,9 @@
---> 1.5.0 <--
+--> 1.5.1 <--
+
+- BETA: Repair Database can now sync finished repairs straight to RIS (Refurbishment Information System)
+- This feture will not be available to some users and might become available in a near future.
+
+-- 1.5.0 --
 
 - Audio Test and Keyboard Test windows can now be dragged to move them
 - Install Drivers now accessible via hotkey [8]
