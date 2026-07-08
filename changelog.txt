@@ -1,4 +1,10 @@
---> 1.5.2 <--
+--> 1.5.3 <--
+
+- Live Device Monitor overhaul - device detection is now far more accurate, and connect/disconnect events are grouped much more clearly
+- Driver Update Tool can now be closed with Esc, plus reliability fixes under the hood
+- Changed the Camera Test icon
+
+-- 1.5.2 --
 
 - Drastically improved the update process, both visually and under the hood - progress bars now show real download progress, and updates only download the files that actually changed instead of the whole program
 - Various improvements and fixes to the RIS repair sync feature
