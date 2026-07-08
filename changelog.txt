@@ -1,4 +1,9 @@
---> 1.5.1 <--
+--> 1.5.2 <--
+
+- Drastically improved the update process, both visually and under the hood - progress bars now show real download progress, and updates only download the files that actually changed instead of the whole program
+- Various improvements and fixes to the RIS repair sync feature
+
+-- 1.5.1 --
 
 - BETA: Repair Database can now sync finished repairs straight to RIS (Refurbishment Information System)
 - This feture will not be available to some users and might become available in a near future.
