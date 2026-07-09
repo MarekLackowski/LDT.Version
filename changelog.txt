@@ -1,4 +1,12 @@
---> 1.5.3 <--
+--> 1.5.4 <--
+
+- Service Board completely redesigned - now looks and feels like a real chat: messages grouped by day ("Today"/"Yesterday"), replies/comments on posts (collapsed by default, expand with the Reply button), a "New Post" bar built right into the feed, and pinned posts are readable in full with a "Show more" option
+- Account profile completely redesigned - new profile card with a tier-colored banner, and a "Change Password" option now available any time (not just on first login)
+- Create Post and User Management windows redesigned to match, and the Target Groups list in Create Post no longer gets cut off when there are many groups
+- Fixed the technician dropdown in Repair Database not remembering/auto-selecting the last used technician
+- Cleaned up the updater's status text during updates
+
+-- 1.5.3 --
 
 - Live Device Monitor overhaul - device detection is now far more accurate, and connect/disconnect events are grouped much more clearly
 - Driver Update Tool can now be closed with Esc, plus reliability fixes under the hood
