@@ -1,4 +1,10 @@
---> 1.5.4 <--
+--> 1.5.5 <--
+
+- Change Password now requires your current password first - stops anyone at an unlocked session from hijacking an account by changing its password
+- Fixed error messages (wrong password, mismatched passwords, etc.) not being visible in the Change Password window
+- Fixed Camera Test occasionally freezing the entire app when closed quickly or switched while active
+
+-- 1.5.4 --
 
 - Service Board completely redesigned - now looks and feels like a real chat: messages grouped by day ("Today"/"Yesterday"), replies/comments on posts (collapsed by default, expand with the Reply button), a "New Post" bar built right into the feed, and pinned posts are readable in full with a "Show more" option
 - Account profile completely redesigned - new profile card with a tier-colored banner, and a "Change Password" option now available any time (not just on first login)
