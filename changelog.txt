@@ -1,4 +1,13 @@
---> 1.5.6 <--
+--> 1.5.7 <--
+
+- RIS Database mode polished based on tester feedback: clearer messaging about what gets saved where, and the interface only shows what's actually relevant to that mode
+- RIS Database now shows RAM/storage info pulled from RIS, editable and saved back alongside the repair
+- Reject Reason / Actions Taken / Materials Used suggestions now work in RIS Database mode too, building up from your own past entries
+- RIS Database's stats panel now breaks down repairs into Repaired / Broker-Scrap / All, refreshes immediately after saving, and the Load button can pull data from RIS on demand
+- Repair Database automatically locks with a clear message if the RIS connection drops, instead of silently failing
+- Everyone gets a clean, consistent first-time experience with RIS Database after this update
+
+-- 1.5.6 --
 
 - New RIS Database mode in Repair Database - available to accounts with a RIS technician assigned by an admin, letting repairs sync straight to RIS without needing shared database access
 - Removed the old "Local Database (beta)" option - replaced entirely by RIS Database mode
