@@ -1,4 +1,12 @@
---> 1.5.5 <--
+--> 1.5.6 <--
+
+- New RIS Database mode in Repair Database - available to accounts with a RIS technician assigned by an admin, letting repairs sync straight to RIS without needing shared database access
+- Removed the old "Local Database (beta)" option - replaced entirely by RIS Database mode
+- Repair Database shows a short one-time notice explaining how access works now, the first time you open it after this update
+- Manual technician selection is gone - repairs always sync under the technician name assigned to your account
+- If you don't see the RIS option even though you should have access, log out and back in once
+
+-- 1.5.5 --
 
 - Change Password now requires your current password first - stops anyone at an unlocked session from hijacking an account by changing its password
 - Fixed error messages (wrong password, mismatched passwords, etc.) not being visible in the Change Password window
