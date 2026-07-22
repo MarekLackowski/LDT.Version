@@ -1,4 +1,14 @@
---> 1.5.7 <--
+--> 1.5.8 <--
+
+- Added an on-screen keyboard shortcut button in Repair Database, so data can still be entered if the physical keyboard isn't working
+- Removed the Date field from Repair Database entirely - RAM/Memory now show in its place for both shared and RIS database access, and are saved and reloaded with the rest of the record
+- Fixed the network status indicator sometimes staying stuck on "Offline" after starting the computer with an Ethernet cable already connected, even though the internet was actually working
+- Screen Test now jumps to 100% brightness while it's open and restores your previous brightness when you close it
+- Microphone and speakers are now automatically unmuted when the program starts, and the fix is now more thorough so it actually catches the muted device
+- Fixed forced updates sometimes not showing the "Critical Update Required" prompt until the program was restarted a second time
+- Typing symbols like "@" (Shift+2) into text fields such as the Account username/password no longer accidentally triggers keyboard shortcuts and switches tabs
+
+-- 1.5.7 --
 
 - RIS Database mode polished based on tester feedback: clearer messaging about what gets saved where, and the interface only shows what's actually relevant to that mode
 - RIS Database now shows RAM/storage info pulled from RIS, editable and saved back alongside the repair
