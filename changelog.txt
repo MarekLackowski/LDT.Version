@@ -1,3 +1,14 @@
+--> 1.5.9 <--
+
+- Fixed laptops sometimes showing "Offline" right after starting even with internet working, especially on freshly-installed machines - the program now tries to fix it automatically instead of needing a cable unplug/replug
+- New Desktop Mode (toggle in Account) - turns the program into a dedicated Repair Database terminal, hiding Diagnostics, Script Library and Utilities, with shortcuts and battery info adjusted to match, and a clear "Desktop Mode" label
+- Fixed the diagnostic test buttons briefly flashing on screen right at startup in Desktop Mode, before Repair Database finished loading
+- Driver Update Tool now has an "Auto reset if needed" checkbox - if checked, it automatically restarts the computer when a driver install requires it
+- Fixed a bug where Trial mode could silently stop behaving like Trial after the first launch
+- Trial mode can no longer open Repair Database at all - shows the same "upgrade required" message as Account
+- The on-screen keyboard button can no longer be selected by pressing Tab
+- Team leaderboard in RIS Database now ranks fairly (a repaired unit counts for more than a broker/scrap one), shows everyone instead of just the top 3, and highlights the top 3; also fixed a bug where an unrecognized status could throw off the numbers shown
+
 --> 1.5.8 <--
 
 - Added an on-screen keyboard shortcut button in Repair Database, so data can still be entered if the physical keyboard isn't working
