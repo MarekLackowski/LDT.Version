@@ -1,9 +1,11 @@
 --> 1.6 <--
 
+- New app icon
 - Repair Database no longer pre-fills the Serial field with this computer's own serial number in Desktop Mode
 - Text in Service Board posts and comments can now be selected and copied
 - Hovering a pinned Service Board post now shows the full post, just like in the main feed.
 - Comments on Service Board posts are now collapsed by default with a working show/hide button, plus a separate "Reply" button to write a new one.
+- Repair Database's Repair Status list now includes "Waiting for parts", counted toward the leaderboard the same way as Broker/Scrap
 - Team leaderboard now gives 1st/2nd/3rd place gold/silver/bronze numbers
 - Leaderboard now shows your LDT account nickname instead of your RIS name, if you have an LDT account
 - Added a daily team target bar to the leaderboard (15 repairs per technician) that turns gold once the team hits it
@@ -13,6 +15,7 @@
 - Fixed Service Board and Account team list sometimes showing empty right after opening, or right after posting/deleting something - caused by hitting Google's request limits, should now be far more reliable
 - Fixed an occasional "403 Forbidden" error when saving a repair to the RIS database
 - Fixed Camera Test sometimes freezing the whole program when switching away from it while the camera was running
+- Fixed the R/B/P column labels above the team leaderboard being slightly misaligned with their columns
 - Camera Test now shows the picture as soon as it's actually ready instead of always waiting a fixed few seconds
 
 -- 1.5.9.1 --
