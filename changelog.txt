@@ -15,13 +15,13 @@
 - Fixed Camera Test sometimes freezing the whole program when switching away from it while the camera was running
 - Camera Test now shows the picture as soon as it's actually ready instead of always waiting a fixed few seconds
 
---> 1.5.9.1 <--
+-- 1.5.9.1 --
 
 - Team leaderboard in RIS Database now shows tied technicians with the same rank instead of an arbitrary order
 - The "All" column in the leaderboard is now "Points", showing each technician's score directly
 - The leaderboard now refreshes automatically every 10 seconds while Repair Database is open, so everyone sees new repairs without reopening the tab
 
---> 1.5.9 <--
+-- 1.5.9 --
 
 - Fixed laptops sometimes showing "Offline" right after starting even with internet working, especially on freshly-installed machines - the program now tries to fix it automatically instead of needing a cable unplug/replug
 - New Desktop Mode (toggle in Account) - turns the program into a dedicated Repair Database terminal, hiding Diagnostics, Script Library and Utilities, with shortcuts and battery info adjusted to match, and a clear "Desktop Mode" label
@@ -32,7 +32,7 @@
 - The on-screen keyboard button can no longer be selected by pressing Tab
 - Team leaderboard in RIS Database now ranks fairly (a repaired unit counts for more than a broker/scrap one), shows everyone instead of just the top 3, and highlights the top 3; also fixed a bug where an unrecognized status could throw off the numbers shown
 
---> 1.5.8 <--
+-- 1.5.8 --
 
 - Added an on-screen keyboard shortcut button in Repair Database, so data can still be entered if the physical keyboard isn't working
 - Removed the Date field from Repair Database entirely - RAM/Memory now show in its place for both shared and RIS database access, and are saved and reloaded with the rest of the record
