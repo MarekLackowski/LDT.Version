@@ -1,4 +1,14 @@
---> 1.6 <--
+--> 1.6.1 <--
+
+- Desktop Mode's exit confirmation now shows a simple "Close Program" / "Close this window" choice instead of the full shutdown/restart menu
+- The program now checks for updates periodically in the background, not just at startup, so new updates (especially critical ones) get noticed much sooner
+- Added a small "ⓘ" icon next to the version number that lets you reopen the What's New screen at any time
+- Fixed Service Board sometimes showing already-read posts as unread again
+- Fixed closing the What's New screen in Desktop Mode opening Diagnostics instead of Repair Database
+- Fixed the Autopilot status on the Diagnostics screen sometimes getting stuck on "No Network" after switching tabs, even once the internet was back
+- Fixed pressing Escape not opening the exit confirmation dialog while typing in a Repair Database field
+
+-- 1.6 --
 
 - New app icon
 - Repair Database no longer pre-fills the Serial field with this computer's own serial number in Desktop Mode
