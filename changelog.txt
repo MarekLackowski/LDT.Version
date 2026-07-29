@@ -1,9 +1,17 @@
---> 1.6.1 <--
+--> 1.6.2 <--
+
+- Added RMA Mode, a dedicated version of the program for the RMA department, switched on in Account next to Desktop Mode
+- Reaching the daily target on the team leaderboard is now marked with an animated gold highlight, and the R and B counters move gently
+- Desktop Mode and RMA Mode no longer start hardware-related background services, so the program opens faster and uses fewer resources
+- Fixed Service Board sometimes showing already-read posts as unread again
+- Fixed the Service Board notification dot sometimes not appearing at all for a genuinely new post or comment
+- Fixed the app logo being slightly cropped
+
+-- 1.6.1 --
 
 - Desktop Mode's exit confirmation now shows a simple "Close Program" / "Close this window" choice instead of the full shutdown/restart menu
 - The program now checks for updates periodically in the background, not just at startup, so new updates (especially critical ones) get noticed much sooner
 - Added a small "ⓘ" icon next to the version number that lets you reopen the What's New screen at any time
-- Fixed Service Board sometimes showing already-read posts as unread again
 - Fixed closing the What's New screen in Desktop Mode opening Diagnostics instead of Repair Database
 - Fixed the Autopilot status on the Diagnostics screen sometimes getting stuck on "No Network" after switching tabs, even once the internet was back
 - Fixed pressing Escape not opening the exit confirmation dialog while typing in a Repair Database field
