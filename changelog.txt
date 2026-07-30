@@ -1,4 +1,17 @@
---> 1.6.3 <--
+--> 1.6.4 <--
+
+- Diagnostics now opens noticeably faster, both at startup and when switching back to it
+- Service Board and Account now switch faster when moving between tabs
+- Reject Reason, Actions Taken and Materials Used now autofill from RIS when an existing record has them written in our format
+- RIS Database now has a search bar to find and reopen a repair you logged today, shown as the same cards used elsewhere in the app
+- Added a Settings screen in Account, with an option to reset learned autocomplete suggestions
+- Settings can now scan for missing or corrupted files the program depends on, with a one-click fix for each problem found, from its own Diagnostics window
+- Fixed old data staying in the Index, Order Number, Model and other fields after loading a repair and then typing a new serial
+- The RIS Database info screen now only appears when you click "Enable RIS Database" for the first time, instead of right after opening Repair Database
+- The team leaderboard now shows more entries before scrolling is needed
+- The program no longer logs you out on its own -- a saved login now stays valid until you log out yourself
+
+-- 1.6.3 --
 
 - Supervisors can now pin and unpin posts from Basic users, and Moderators can do the same for Supervisor and Basic posts
 - Fixed the gold highlight on the team leaderboard being cut off at the edges
