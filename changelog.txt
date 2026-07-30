@@ -1,4 +1,20 @@
---> 1.6.2.1 <--
+--> 1.6.3 <--
+
+- Supervisors can now pin and unpin posts from Basic users, and Moderators can do the same for Supervisor and Basic posts
+- Fixed the gold highlight on the team leaderboard being cut off at the edges
+- Fixed User Management wrongly listing "Repair" as a protected group name
+- Fixed the Touch Test button on Diagnostics sometimes not appearing at startup on touch-enabled devices
+- Fixed the cursor jumping to the end of Reject Reason, Actions Taken and Materials Used when editing an earlier word instead of typing at the end
+- Fixed Reject Reason's autocomplete permanently stopping for the rest of the session after editing an earlier word and then typing a new one at the end
+- Repair Database now greys out without an internet connection, the same as Service Board and Account
+- Removed Guest mode from the Repair Database access screen -- it was no longer needed
+- Fixed Tab not being able to reach the "Enable RIS Database" button on the Repair Database access screen
+
+-- 1.6.2.2 --
+
+- RMA Database now warns you when there is no connection to RIS, instead of looking like the device simply is not registered
+
+-- 1.6.2.1 --
 
 - Fixed the program closing unexpectedly when a technician on the team leaderboard reached the daily target
 
