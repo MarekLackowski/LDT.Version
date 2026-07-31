@@ -1,4 +1,25 @@
---> 1.6.4 <--
+--> 1.6.5 <--
+
+- RMA Mode can now print a label for a repaired, broker or scrapped unit straight from the entry, filled in from the record and sent directly to the label printer
+- Added a preview of the RMA label, so its layout can be checked before anything is printed
+- RMA Mode can now be set to the label size loaded in the printer, 100 x 50 mm or 80 x 40 mm, with everything on the label scaling to fit
+- Added a security check that requires an internet connection if the program has been unable to reach the internet for a long time
+- RMA Mode now picks the worksheet from a list of the sheets found in the selected workbook, instead of having its name typed in by hand
+- The Solution field in RMA Mode is now only shown for repaired units, where it applies
+- Broker specifications not found in RIS are now filled in as FALSE, and a missing optical drive as "no ODD", instead of being left blank
+- When RIS has a Reject Reason, Actions Taken or Materials Used written in a different format, a note under the field now says so and shows what RIS had, instead of the field silently staying empty
+- The Confirm button now shows that a record is being saved, so it is clear the save is in progress before the confirmation appears
+- Choosing the workbook or backup location in RMA Mode now shows that the file is being read, instead of appearing to freeze
+- The file scan in Settings now checks that the updater is present, without which the program cannot update itself and the Force Update fixes do nothing
+- The file scan in Settings now reports a worksheet name that is no longer in the selected workbook, instead of it only failing when an entry is saved
+- Label previews no longer pile up in the temporary folder
+- Records can no longer be saved with nothing in them but a serial number
+- Fixed RIS statistics and RIS search not working until the program was restarted, after logging in on a fresh installation
+- Fixed Actions Taken and Materials Used not autofilling from RIS on a fresh installation, where entries written in our format were treated as if they were not
+- Fixed Reject Reason autofilling from RIS with entries that only looked like our format, such as comma separated lists
+- Removed the "Matching entries" counter outside the shared Repair Database, where it overlapped other elements
+
+-- 1.6.4 --
 
 - Diagnostics now opens noticeably faster, both at startup and when switching back to it
 - Service Board and Account now switch faster when moving between tabs
