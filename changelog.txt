@@ -1,4 +1,14 @@
---> 1.6.6.1 <--
+--> 1.6.7 <--
+
+- A post can now be attached to an order number, a model or both, and then replaces the leaderboard in Repair Database whenever a matching unit is opened, until that unit is saved
+- Posts carrying instructions now say so on the board, along with what they are attached to
+- Deleting a post now deletes its replies as well
+- Repair Database now keeps what has been typed when moving between tabs, the same as RMA Mode
+- Fixed model names printing on top of themselves on RMA labels, and a model breaking onto a second line for no visible reason
+- Reject Reason no longer autofills from RIS with slash separated entries, which are not our format
+- Fixed the menu background stopping part way down the side of the window
+
+-- 1.6.6.1 --
 
 - Added Send feedback to the menu, for reporting a problem or suggesting an improvement
 - Updating an existing entry in RMA Mode now keeps its original date instead of today's
