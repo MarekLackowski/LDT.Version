@@ -1,4 +1,9 @@
---> 1.6.6 <--
+--> 1.6.6.1 <--
+
+- Added Send feedback to the menu, for reporting a problem or suggesting an improvement
+- Updating an existing entry in RMA Mode now keeps its original date instead of today's
+
+-- 1.6.6 --
 
 - Print Label in Repair Database now prints a reject label directly, instead of a PDF
 - The reject label carries the reject reason, PNR and ProductionOrderLineID from RIS, with barcoded serial and order number, and space to add reasons by hand
