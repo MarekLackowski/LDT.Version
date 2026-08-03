@@ -1,4 +1,20 @@
---> 1.6.5 <--
+--> 1.6.6 <--
+
+- Print Label in Repair Database now prints a reject label directly, instead of a PDF
+- The reject label carries the reject reason, PNR and ProductionOrderLineID from RIS, with barcoded serial and order number, and space to add reasons by hand
+- Added the label printer address to Settings
+- A "/" left at the end of Actions Taken or Materials Used is now removed
+- Fixed the PNR never reaching the reject label (requires the relay update)
+- RIS technician and RMA operator names can now be set while creating a user
+- Everything on an RMA label now shrinks to fit, so nothing overlaps
+- The status line on RMA labels is bigger
+- Fixed the end of a long model name printing over its own beginning on RMA labels
+- Fixed a long problem description running over the serial barcode and the case number
+- Fixed Repair Database search staying empty in RIS mode when the tab was opened before the connection was up
+- Repair Database now reloads on its own once the connection comes back
+- Load now says when there is no connection, instead of clearing the form as if the serial were new
+
+-- 1.6.5 --
 
 - RMA Mode can now print a label for a repaired, broker or scrapped unit straight from the entry, filled in from the record and sent directly to the label printer
 - Added a preview of the RMA label, so its layout can be checked before anything is printed
