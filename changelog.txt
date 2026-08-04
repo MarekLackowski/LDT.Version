@@ -1,4 +1,10 @@
---> 1.6.8 <--
+--> 1.6.8.1 <--
+
+- RAM and Memory on a post now take several values, separated by commas
+- A post can now be set to match either RAM or Memory instead of both, so a reminder about a disk no longer disappears when the RAM does not fit
+- RMA Mode can now duplicate an entry for a second, identical unit: everything is kept and only the serial and case number are cleared, instead of searching a new serial and losing it all
+
+-- 1.6.8 --
 
 - Added RIS info to Repair Database, showing everything RIS holds about the serial in the box: the full specification, status, reject reason, who registered it and when, and who last saved its repair (requires the relay update)
 - A unit that has been through the plant before is flagged as such, with its earlier passes listed underneath
