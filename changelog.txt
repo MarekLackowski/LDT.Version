@@ -1,4 +1,23 @@
---> 1.6.7 <--
+--> 1.6.8 <--
+
+- Added RIS info to Repair Database, showing everything RIS holds about the serial in the box: the full specification, status, reject reason, who registered it and when, and who last saved its repair (requires the relay update)
+- A unit that has been through the plant before is flagged as such, with its earlier passes listed underneath
+- A post can now name several order numbers and several models at once, instead of one of each
+- A post can also be limited to a repair status, a RAM size or a storage size, so a reminder can be aimed at units going to broker sales with a particular disk
+- Those settings moved into their own section in the post window, kept closed unless they are in use
+- Instructions now appear as the repair is filled in, not only when the serial is loaded
+- Every repair written to RIS is now logged to LDT_DatabaseLog next to the program, in one growing spreadsheet showing who saved what and when
+- The database log folder can be pointed somewhere else in Settings
+- Removed Print Report from Repair Database
+- Removed the label preview from RMA Mode
+- The program is about 24 MB smaller, and updating clears the files it no longer needs out of the installation
+- A failed update now offers Try again without having to reopen the program, and can still start it as it was
+- Updating and installing now retry a download that drops out, instead of giving up on the whole thing
+- Installing no longer reports a failure when only an extra tool could not be downloaded
+- An extra tool that fails to unpack no longer leaves the previous copy deleted
+- Updating and installing now clear the working folders they used to leave behind, and check free space on the drive they download to
+
+-- 1.6.7 --
 
 - A post can now be attached to an order number, a model or both, and then replaces the leaderboard in Repair Database whenever a matching unit is opened, until that unit is saved
 - Posts carrying instructions now say so on the board, along with what they are attached to
