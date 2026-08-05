@@ -1,4 +1,18 @@
---> 1.6.8.2 <--
+--> 1.6.9 <--
+
+- Load now accepts the greyed-out serial suggestion instead of quietly looking up your own machine and appearing to do nothing
+- Load now says so when RIS has no record for a serial, rather than leaving you wondering whether the button worked
+- Typing a new serial and tabbing on now clears the previous unit's details first, so two units can no longer end up mixed in one form
+- A planned break in the RIS connection is now announced in the program: a bar appears above the form counting down, so there is time to finish and save the unit in hand
+- When a unit instruction appears, the fields that brought it up are outlined in amber, so it is clear what about this unit triggered it
+- A model on an instruction no longer has to be the full name: "ZBook" now reaches every ZBook, and "840 G7" reaches the EliteBook 840 G7
+- The mouse test is easier to read: the buttons are outlined, instead of dark grey on dark grey
+- RIS Database now follows whoever is signed in: signing in with an account that has no RIS technician switches Repair Database back to the shared database and says so, instead of leaving lookups failing for no visible reason. It comes back on its own when an account with RIS access signs in again
+- Signing in or out now clears whatever the previous person had half-written in Repair Database, so nobody inherits someone else's unit
+- Licence keys have been rebuilt from scratch and are now signed, so they cannot be forged or edited. Everyone needs the new key they were given; the old one will no longer be accepted
+- A licence now proves itself without the internet, so an expired one is recognised straight away rather than only when a connection happens to be available
+
+-- 1.6.8.2 --
 
 - The team leaderboard now has a full ladder: bronze at 5 units, silver at 10, gold at 15, platinum at 20, emerald at 25, diamond at 30, mystic at 35 and grandmaster at 40, each with its own colour and glow
 - The top three ranks - diamond, mystic and grandmaster - stand out further, with a heavier edge and a deeper, faster glow
