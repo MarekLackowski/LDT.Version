@@ -1,4 +1,10 @@
---> 1.6.8.1 <--
+--> 1.6.8.2 <--
+
+- The team leaderboard now has a full ladder: bronze at 5 units, silver at 10, gold at 15, platinum at 20, emerald at 25, diamond at 30, mystic at 35 and grandmaster at 40, each with its own colour and glow
+- The top three ranks - diamond, mystic and grandmaster - stand out further, with a heavier edge and a deeper, faster glow
+- Each technician now carries a small gem showing the rank they finished the previous working day on, so Monday shows Friday
+
+-- 1.6.8.1 --
 
 - RAM and Memory on a post now take several values, separated by commas
 - A post can now be set to match either RAM or Memory instead of both, so a reminder about a disk no longer disappears when the RAM does not fit
