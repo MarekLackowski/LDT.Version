@@ -1,4 +1,11 @@
---> 1.6.9 <--
+--> 1.6.9.5 <--
+
+- RMA Mode now counts how many units have been saved today, shown under the save button. It starts again each day on its own
+- The search box at the top now says what it actually searches, so it is clear that in RIS mode it only covers the units you saved today
+- Supervisors and above can now produce a performance report from Account, for a single day or any period, showing each technician's share of the total
+- RMA Mode now shows the same warning about a planned break in the RIS connection that Repair Database does
+
+-- 1.6.9 --
 
 - Load now accepts the greyed-out serial suggestion instead of quietly looking up your own machine and appearing to do nothing
 - Load now says so when RIS has no record for a serial, rather than leaving you wondering whether the button worked
@@ -141,7 +148,7 @@
 
 - Desktop Mode's exit confirmation now shows a simple "Close Program" / "Close this window" choice instead of the full shutdown/restart menu
 - The program now checks for updates periodically in the background, not just at startup, so new updates (especially critical ones) get noticed much sooner
-- Added a small "ⓘ" icon next to the version number that lets you reopen the What's New screen at any time
+- Added a small "â“˜" icon next to the version number that lets you reopen the What's New screen at any time
 - Fixed closing the What's New screen in Desktop Mode opening Diagnostics instead of Repair Database
 - Fixed the Autopilot status on the Diagnostics screen sometimes getting stuck on "No Network" after switching tabs, even once the internet was back
 - Fixed pressing Escape not opening the exit confirmation dialog while typing in a Repair Database field
@@ -271,7 +278,7 @@
 -- 1.4.6 --
 
 - Fixed a bug causing constant pings about new posts, now read posts are automatically saved as read
-- Touch Test: overlays no longer block touch – squares always accessible
+- Touch Test: overlays no longer block touch â€“ squares always accessible
 - Login shortcuts (Shift+5/Shift+6) now blocked when offline
 - License company name now loads immediately when internet becomes available
 - Enter key now activates license and logs in (no need to click buttons)
@@ -280,32 +287,32 @@
 -- 1.4.5 --
 
 - Board and Account views now scale properly on different screen sizes (Viewbox added)
-- Script Library now supports .psm1 (PowerShell modules) – auto-import and run
-- Added BIOS Info utility – displays all BIOS settings with search and color-coded values
+- Script Library now supports .psm1 (PowerShell modules) â€“ auto-import and run
+- Added BIOS Info utility â€“ displays all BIOS settings with search and color-coded values
 
 -- 1.4.4 --
 
 - "Update Available" now opens changelog window before updating
-- Barcode button next to Serial in QuickSpecs – opens scannable barcode window
-- Arrow keys added to Keyboard Test layout (▲ ► ▼ ◄)
+- Barcode button next to Serial in QuickSpecs â€“ opens scannable barcode window
+- Arrow keys added to Keyboard Test layout (â–² â–º â–¼ â—„)
 
 -- 1.4.3 --
 
-- Live Device Monitor in Diagnostics tab – detects USB, mouse, keyboard, audio, network with smart grouping
+- Live Device Monitor in Diagnostics tab â€“ detects USB, mouse, keyboard, audio, network with smart grouping
 
 -- 1.4.2 --
 
-- Added post pinning (📌) – Admin/Moderator/Supervisor can pin important posts
+- Added post pinning (ðŸ“Œ) â€“ Admin/Moderator/Supervisor can pin important posts
 - Pinned posts appear in a dedicated right-side panel with compact miniatures
 - Pinned post miniatures show author tier color, type badge, and group tags
-- Notification system – badge on Service Board button shows unread post count
+- Notification system â€“ badge on Service Board button shows unread post count
 - Notification color reflects the highest-priority unread post
 - New posts marked with "NEW" badge on first visit
-- Read tracking per user – posts marked read only when entering Service Board
+- Read tracking per user â€“ posts marked read only when entering Service Board
 - Delete post now also clears pinned status column
 
-- Added post editing (✏️ button) – Admin/Moderator/Supervisor/Basic can edit own posts
-- Added user editing (✏️ button in User Management) – change tier, groups, password
+- Added post editing (âœï¸ button) â€“ Admin/Moderator/Supervisor/Basic can edit own posts
+- Added user editing (âœï¸ button in User Management) â€“ change tier, groups, password
 - Protected groups (Trial, Basic, Supervisor, Moderator, Admin) are automatic and hidden from non-Admin
 - Post type dropdown now only shows allowed types based on user tier
 - Fixed moderator seeing Trial-group posts
@@ -322,7 +329,7 @@
 - Replaced HTTP ping internet check with native Windows NCSI (Network Connectivity Status Indicator)
 - No more background HTTP requests for connectivity checks
 - Fixed intermittent offline flickering on Board/Account tabs
-- Redesigned Account view – removed TabControl, simplified to two action buttons
+- Redesigned Account view â€“ removed TabControl, simplified to two action buttons
 - Added self-inflicted password change
 
 -- 1.3.2 --
@@ -387,19 +394,19 @@
 - New PowerShell script: installs drivers one by one with per-driver progress reporting
 - Progress bar divided equally per driver (0-25% searching, 25-100% per-driver steps)
 - Driver count shown as (current/total) without driver names
-- Removed ReadKey pauses – process ends cleanly without timeout
+- Removed ReadKey pauses â€“ process ends cleanly without timeout
 - Added Restart as Admin button when admin privileges missing
 - Added Restart Now button when reboot required after installation
 
 -- 1.1.8 --
 
 - Redesigned Driver Update window
-- Removed "Include quickspecs" checkbox – quickspecs are now automatically saved only when the entered serial matches the detected device serial; different serial = specs saved as "-"
-- Removed green border from installed utility cards – only "Installed" text remains green, border stays default gray
+- Removed "Include quickspecs" checkbox â€“ quickspecs are now automatically saved only when the entered serial matches the detected device serial; different serial = specs saved as "-"
+- Removed green border from installed utility cards â€“ only "Installed" text remains green, border stays default gray
 
 -- 1.1.7 --
 
-- Fixed utility installation detection – download path now matches the search path in Utilities folder
+- Fixed utility installation detection â€“ download path now matches the search path in Utilities folder
 - Added 1-second loading animation before camera initialization in Camera Test
 - Made mouse test and touch test green borders persistent across tab switching
 - Experimental: Reject Reason autocomplete now cycles through suggestions every 2 keystrokes based on frequency (most common first, then next most common, etc.)
@@ -456,17 +463,17 @@
 
 -- 1.0.8 --
 
-- Fixed audio test playback – sound now restarts from beginning when Play is pressed after completion, and Stop button fully resets the audio position
+- Fixed audio test playback â€“ sound now restarts from beginning when Play is pressed after completion, and Stop button fully resets the audio position
 - Replaced battery serial number display with battery health condition
-- Battery condition now color-coded: green (≥85%), yellow (45-84%), red (<45%)
+- Battery condition now color-coded: green (â‰¥85%), yellow (45-84%), red (<45%)
 - Battery panel background changes color according to condition for better visual feedback
-- Fixed battery voltage display positioning – now correctly shown next to remaining time
+- Fixed battery voltage display positioning â€“ now correctly shown next to remaining time
 - Battery health refreshes every 30 seconds to minimize system overhead
 
 -- 1.0.7 --
 
-- Diagnostics view now uses Viewbox with two‑way scaling
-- Right panel (QuickSpecs) also switched to Viewbox with DownOnly scaling – prevents content from being cut off on smaller displays
+- Diagnostics view now uses Viewbox with twoâ€‘way scaling
+- Right panel (QuickSpecs) also switched to Viewbox with DownOnly scaling â€“ prevents content from being cut off on smaller displays
 - Reduced minimum window height from 750 to 650 to better fit laptop screens without overlapping taskbar
 - Adjusted layout margins and paddings in Diagnostics view for a more compact, balanced appearance
 - Camera selection combobox is now always fully visible, no longer clipped at the bottom of the view
@@ -475,11 +482,11 @@
 
 - Fixed a bug causing unnecessary focus on contents of Utilities tab
 - Centered all label text vertically in QuickSpecs panel 
-- Fixed camera loading animation – now properly displays 3-second loading animation on first camera start, with smooth transitions on subsequent uses
+- Fixed camera loading animation â€“ now properly displays 3-second loading animation on first camera start, with smooth transitions on subsequent uses
 
 -- 1.0.5 --
 
-- Fixed progress bar behavior in Driver Update window – now smoothly transitions through phases: scanning (0-30%), downloading (30-60%), installing (60-95%), and completion (95-100%)
+- Fixed progress bar behavior in Driver Update window â€“ now smoothly transitions through phases: scanning (0-30%), downloading (30-60%), installing (60-95%), and completion (95-100%)
 - Added several security based features
 
 -- 1.0.4 --
@@ -502,18 +509,18 @@
 -- 1.0.1 --
 
 - Added HWiNFO utility card
-- Fixed icon generation for main executable – now uses multi‑resolution .ico file (16, 32, 64px) for proper display in Windows Explorer and taskbar
-- Refined card click animation – scaling effect now triggers only on double‑click, not on single click, for both Utilities and Script Library cards
+- Fixed icon generation for main executable â€“ now uses multiâ€‘resolution .ico file (16, 32, 64px) for proper display in Windows Explorer and taskbar
+- Refined card click animation â€“ scaling effect now triggers only on doubleâ€‘click, not on single click, for both Utilities and Script Library cards
 
 -- 1.0.0 --
 
-- Added Utilities tab with downloadable tools (Fan Control and OCCT now only, more coming in the future) – cards show installed status, download on demand with progress window
+- Added Utilities tab with downloadable tools (Fan Control and OCCT now only, more coming in the future) â€“ cards show installed status, download on demand with progress window
 - Utilities card icons are grayed out when tool not installed, fully visible when installed
 - Installer now includes optional utilities with checkbox selection
 - Installation progress bar now smoothly animates and shows real download size in MB
 - Removed unnecessary start menu shortcut creation from installer
-- Removed admin restart requirement – installer now handles permission issues gracefully
+- Removed admin restart requirement â€“ installer now handles permission issues gracefully
 - Camera test now shows loading animation while starting camera
-- Redesigned exit confirmation dialog – cleaner layout with centered text and buttons, improved readability
+- Redesigned exit confirmation dialog â€“ cleaner layout with centered text and buttons, improved readability
 - Password dialog (Repair Database Auth) now has centered text input and styled buttons with hover/focus effects
 - All action buttons (Print Label, Print Report, Confirm, Update) now have consistent visual feedback
