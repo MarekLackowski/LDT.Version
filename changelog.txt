@@ -1,9 +1,15 @@
---> 1.6.9.5 <--
+--> 1.7 <--
 
-- RMA Mode now counts how many units have been saved today, shown under the save button. It starts again each day on its own
-- The search box at the top now says what it actually searches, so it is clear that in RIS mode it only covers the units you saved today
-- Supervisors and above can now produce a performance report from Account, for a single day or any period, showing each technician's share of the total
+- Supervisors and above can now produce a performance report from Account: pick the technicians and a period, or a single day, and get an Excel workbook with each person's totals, daily average, best day and share of the team
+- Added Challenger, a new top rank at 50 units, in white on black
+- The team target bar now carries its own rank, changing colour as the team closes on the target and again as it goes past, up to challenger at 75 units over
+- The team target bar is taller, and says how many are left or how many over
 - RMA Mode now shows the same warning about a planned break in the RIS connection that Repair Database does
+- The search box at the top now says what it searches, so it is clear that in RIS mode it covers only the units you saved today
+- Fixed the buttons in Account overlapping the name and company on a narrow window
+- Fixed the pinned posts column scrolling the board instead of itself
+- Fixed the unit instructions panel not scrolling when there was more than fits on screen
+- Fixed RMA units counter
 
 -- 1.6.9 --
 
