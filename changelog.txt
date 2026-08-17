@@ -1,4 +1,21 @@
---> 1.7.1 <--
+--> 1.7.2 <--
+
+- The sound test no longer plays its tone after the window has been closed, and the microphone is released properly when the window is closed while it is still starting up
+- The database log now opens as proper columns in Excel instead of everything landing in one cell. Entries written in the old format are removed the first time a repair is saved after this update
+- Settings now has a Check for updates button, which checks straight away and offers to install anything newer
+- Load now falls back to RIS when a serial is not in the shared database, instead of clearing the form without any lookup
+- The program now reopens on the monitor it was closed on, in the same position and size, and stays maximised if it was maximised
+- Search results in RIS mode now show the corrected unit after a save, instead of the version from before the correction until the program was restarted
+- A forced update now shows the patch notes of the version being installed, so it is clear what is being fixed, instead of only stating that an update is required
+- Search results in Repair Database are now a single line per unit with columns for serial, model, status, result and date, so around fourteen units fit on screen instead of three
+- The unit under the pointer or the selection now has its INOR, reject reason, actions taken and materials used shown in a panel below the results, instead of every result carrying all of that text
+- Search results can now be worked from the keyboard: arrows move the selection, Enter loads the selected unit, Escape closes the results
+- Clicking the search box with nothing typed now lists every unit it searches, instead of showing nothing until something is typed
+- The blue help marks next to Reject Reason, Actions Taken and Materials Used shrink once their help has been shown, so they stay reachable without drawing attention
+- RIS search now recovers on its own after the connection comes back, instead of staying dead until the program was restarted. It also says why nothing is listed - loading, no connection, or nothing saved today - instead of spinning silently
+- Print Label now asks for confirmation before printing, in both Repair Database and RMA Mode, and states what is about to go on the label, so a stray click no longer sends a label to the printer
+
+-- 1.7.1 --
 
 - Fixed garbled characters appearing in place of dashes, both in the previous-day rank tooltip on the leaderboard and in this What's New window
 - The team target no longer repeats how many are left, which the figures next to it already showed. It now only says how many the team is over the target, once it gets there
