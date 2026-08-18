@@ -4,7 +4,7 @@
 - The model line on the RMA label now breaks a long specification at its slashes instead of shrinking the whole line to fit it in one piece, so it prints noticeably larger
 - The model and status rows on the RMA label now take whatever height the problem/solution text does not need, so the status line prints about a quarter larger and a label with little text is no longer left half empty
 - Fixed the case barcode running off the edge of the RMA label when the case number is eight digits or longer
-- Quick repairs done before a unit reaches RIS now show on the team leaderboard: they are recorded from a separate button, count as half a unit each, and the row marks the figure with a star so it is clear where it comes from. The team target still counts only what RIS itself recorded
+- Quick repairs done before a unit reaches RIS now show on the team leaderboard: they are recorded from a separate button, count as half a unit each, and the row marks the figure with a star so it is clear where it comes from. The team target is untouched by them: neither the half units nor the person doing them move it, so it stays on what RIS itself recorded
 
 -- 1.7.2.5 --
 
