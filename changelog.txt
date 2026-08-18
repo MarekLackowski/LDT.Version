@@ -1,4 +1,11 @@
---> 1.7.2 <--
+--> 1.7.2.5 <--
+
+- The RMA label now fills the space it has: the model line and the problem/solution text grow when there is less text to print, instead of staying small. The model only keeps the larger size while the problem/solution text still fits at its normal size
+- RMA Mode now also finds units by NAV code: type it into the same box as a serial and press Search, and the units registered under that code are listed newest first, so the one on the bench can be picked when its serial cannot be read. Requires the current relay package
+- RMA Mode has a clear button next to Search, which empties the whole form and puts the cursor back in the serial box, instead of the fields having to be cleared one by one
+- An available update no longer locks Repair Database. The form now only locks for an update that is marked as required, so an ordinary release can be installed at the end of a unit instead of stopping work the moment it appears
+
+-- 1.7.2 --
 
 - The sound test no longer plays its tone after the window has been closed, and the microphone is released properly when the window is closed while it is still starting up
 - The database log now opens as proper columns in Excel instead of everything landing in one cell. Entries written in the old format are removed the first time a repair is saved after this update
