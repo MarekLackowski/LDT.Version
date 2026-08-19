@@ -1,4 +1,15 @@
---> 1.7.3 <--
+--> 1.7.4 <--
+
+- A required update now asks once. Several checks running at the same moment could each open their own prompt, so the same message stacked up on top of itself
+- A required update now shows the patch notes of the version being installed, the same ones the update button shows. It was looking them up under the version named in the forcing rule, which is normally several releases old, so it found nothing and showed no notes at all
+- Quick repairs now show on the leaderboard as the number actually done, and earn 0.75 points each against the 2 a full repair earns and the 1 a broker or scrap outcome earns
+- Saving a unit in Repair Database now refreshes the search bar at the top straight away. In RIS mode the saved unit only turned up there after the tab was opened again
+- The reject label printer address in Settings can now be left empty, and then the label goes to whatever this computer has set as its default Windows printer, the same as the RMA label. Stations already printing to the shop label printer keep doing so
+- The model line on the RMA label now breaks at most once and is never cut short with three dots. A model spread over three lines pushed everything below it out of place, so the type shrinks until it fits two lines instead
+- Problem and solution on the RMA label are now always printed in full, however long they are, instead of being cut short with three dots
+- Text with nothing to break on, such as a description pasted in as one long run, is now wrapped at the edge of the line. The printer never splits a word itself, so it used to print the overflow back over the start of the block and leave the whole field an unreadable smear at the smallest size
+
+-- 1.7.3 --
 
 - A NAV code search in RMA Mode now also lists units written up by hand in the workbook, not only those registered in RIS, and each row says where it was found
 - The model line on the RMA label now breaks a long specification at its slashes instead of shrinking the whole line to fit it in one piece, so it prints noticeably larger
