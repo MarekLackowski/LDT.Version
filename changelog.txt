@@ -1,4 +1,18 @@
---> 1.7.4 <--
+--> 1.7.5.1 <--
+
+- A unit picked up from another machine is now announced by a card in the middle of the screen for four seconds, with its serial, model, order number, status and result, instead of a line of text beside the search bar. It never takes the keyboard, so typing carries on underneath it, and clicking it closes it early
+
+-- 1.7.5 --
+
+- A changed reject reason now reaches the right pass of a unit that has been through the plant more than once. It was written to the oldest rejected pass while the form reads the newest, so on those units the change looked like it had not saved at all
+- Saving a unit that RIS holds no registration for at all now says the reject reason could not be stored, instead of reporting the whole save as successful
+- A unit with a reject reason but no registration standing at Reject now has its newest registration marked as Reject so the text has somewhere to live, and the save says that is what happened. Only a unit with no registration in RIS at all still cannot keep one
+- Saving a unit whose Reject Reason, Actions Taken or Materials Used is only shown under the field, because RIS holds it in a format this program does not read, now asks before saving and names those fields. Saving keeps what RIS already has there instead of blanking it
+- Today's units in RIS mode now refresh while the tab is open, so a unit saved on another machine under the same account turns up without reopening the tab, and the search bar says which serial was picked up
+- A unit opened from the search results now comes back with its index, order number, model, reject reason and specs. A repair recorded straight against a serial has no registration attached to today's list, so those fields arrived empty
+- Repair Status and Repair Result that cannot both be true of one unit now outline in red: Completed with Unable to repair, or Used for parts or Sent to broker sales with Repaired. Saving one asks first and says which two disagree
+
+-- 1.7.4 --
 
 - A required update now asks once. Several checks running at the same moment could each open their own prompt, so the same message stacked up on top of itself
 - A required update now shows the patch notes of the version being installed, the same ones the update button shows. It was looking them up under the version named in the forcing rule, which is normally several releases old, so it found nothing and showed no notes at all
