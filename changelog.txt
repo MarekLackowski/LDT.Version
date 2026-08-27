@@ -1,4 +1,10 @@
---> 1.7.6 <--
+--> 1.7.6.5 <--
+
+- A post on the Service Board can now carry up to four pictures: pick a file, paste a screenshot with Ctrl+V or drop a file on the window
+- Pictures show as thumbnails under the post and open full size on click, with arrows between them
+- A post can also carry up to four files of any kind, up to 5 MB each, saved where you choose when you click one
+
+-- 1.7.6 --
 
 - RIS info in normal mode now puts everything RIS holds about the unit on your desktop screen at once: registration, specification, reject reason, repair, quality checks, cleaning and every earlier pass. It opens locally instead when no other copy of yours is running
 - The RIS info button shows a spinner while the request is on its way and confirms once the desktop has the unit
