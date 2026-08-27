@@ -1,314 +1,324 @@
---> 1.7.5.1 <--
+--> 1.7.6 <--
 
-- A unit picked up from another machine is now announced by a card in the middle of the screen for four seconds, with its serial, model, order number, status and result, instead of a line of text beside the search bar. It never takes the keyboard, so typing carries on underneath it, and clicking it closes it early
+- RIS info in normal mode now puts everything RIS holds about the unit on your desktop screen at once: registration, specification, reject reason, repair, quality checks, cleaning and every earlier pass. It opens locally instead when no other copy of yours is running
+- The RIS info button shows a spinner while the request is on its way and confirms once the desktop has the unit
+- The program starts faster and puts less load on the machine while it runs
+- A field RIS holds in an unreadable format now has an arrow next to the note under it, which puts that text into the field and leaves the cursor at its end
+
+-- 1.7.5.2 --
+
+- Fixed a changed reject reason going to an older pass instead of the one shown on the form
+
+-- 1.7.5.1 --
+
+- A unit picked up from another machine is now announced by a card in the middle of the screen for four seconds, instead of a line of text beside the search bar
 
 -- 1.7.5 --
 
-- A changed reject reason now reaches the right pass of a unit that has been through the plant more than once. It was written to the oldest rejected pass while the form reads the newest, so on those units the change looked like it had not saved at all
-- Saving a unit that RIS holds no registration for at all now says the reject reason could not be stored, instead of reporting the whole save as successful
-- A unit with a reject reason but no registration standing at Reject now has its newest registration marked as Reject so the text has somewhere to live, and the save says that is what happened. Only a unit with no registration in RIS at all still cannot keep one
-- Saving a unit whose Reject Reason, Actions Taken or Materials Used is only shown under the field, because RIS holds it in a format this program does not read, now asks before saving and names those fields. Saving keeps what RIS already has there instead of blanking it
-- Today's units in RIS mode now refresh while the tab is open, so a unit saved on another machine under the same account turns up without reopening the tab, and the search bar says which serial was picked up
-- A unit opened from the search results now comes back with its index, order number, model, reject reason and specs. A repair recorded straight against a serial has no registration attached to today's list, so those fields arrived empty
-- Repair Status and Repair Result that cannot both be true of one unit now outline in red: Completed with Unable to repair, or Used for parts or Sent to broker sales with Repaired. Saving one asks first and says which two disagree
+- Fixed a changed reject reason reaching the wrong pass on a unit that has been through the plant more than once
+- Saving a unit RIS holds no registration for now says the reject reason could not be stored
+- A unit with a reject reason but no registration at Reject now has its newest registration marked as Reject, and the save says so
+- Saving over a field RIS holds in an unreadable format now asks first and keeps what RIS already has
+- Today's units in RIS mode now refresh while the tab is open, and the search bar names the serial picked up
+- Fixed index, order number, model, reject reason and specs coming back empty on a unit opened from search results
+- Repair Status and Repair Result that contradict each other now outline in red, and saving asks first
 
 -- 1.7.4 --
 
-- A required update now asks once. Several checks running at the same moment could each open their own prompt, so the same message stacked up on top of itself
-- A required update now shows the patch notes of the version being installed, the same ones the update button shows. It was looking them up under the version named in the forcing rule, which is normally several releases old, so it found nothing and showed no notes at all
-- Quick repairs now show on the leaderboard as the number actually done, and earn 0.75 points each against the 2 a full repair earns and the 1 a broker or scrap outcome earns
-- Saving a unit in Repair Database now refreshes the search bar at the top straight away. In RIS mode the saved unit only turned up there after the tab was opened again
-- The reject label printer address in Settings can now be left empty, and then the label goes to whatever this computer has set as its default Windows printer, the same as the RMA label. Stations already printing to the shop label printer keep doing so
-- The model line on the RMA label now breaks at most once and is never cut short with three dots. A model spread over three lines pushed everything below it out of place, so the type shrinks until it fits two lines instead
-- Problem and solution on the RMA label are now always printed in full, however long they are, instead of being cut short with three dots
-- Text with nothing to break on, such as a description pasted in as one long run, is now wrapped at the edge of the line. The printer never splits a word itself, so it used to print the overflow back over the start of the block and leave the whole field an unreadable smear at the smallest size
+- Fixed a required update opening several prompts at once
+- A required update now shows the patch notes of the version being installed
+- Quick repairs now show as the number actually done and earn 0.75 points each
+- Saving in Repair Database now refreshes the search bar straight away
+- An empty label printer address in Settings now means this computer's default Windows printer
+- The model line on the RMA label breaks at most once and is never cut short with three dots
+- Problem and solution on the RMA label are always printed in full
+- Text with nothing to break on is now wrapped at the edge of the line instead of printing over itself
 
 -- 1.7.3 --
 
-- A NAV code search in RMA Mode now also lists units written up by hand in the workbook, not only those registered in RIS, and each row says where it was found
-- The model line on the RMA label now breaks a long specification at its slashes instead of shrinking the whole line to fit it in one piece, so it prints noticeably larger
-- The model and status rows on the RMA label now take whatever height the problem/solution text does not need, so the status line prints about a quarter larger and a label with little text is no longer left half empty
-- Fixed the case barcode running off the edge of the RMA label when the case number is eight digits or longer
-- Quick repairs done before a unit reaches RIS now show on the team leaderboard: they are recorded from a separate button, count as half a unit each, and the row marks the figure with a star so it is clear where it comes from. The team target is untouched by them: neither the half units nor the person doing them move it, so it stays on what RIS itself recorded
+- A NAV code search in RMA Mode now also lists rows written up by hand in the workbook, and says where each was found
+- The model line on the RMA label now breaks at its slashes instead of shrinking to fit in one piece
+- The model and status rows on the RMA label now take the height the problem/solution text does not need
+- Fixed the case barcode running off the RMA label at eight digits or more
+- Quick repairs done before a unit reaches RIS now show on the leaderboard, counted as half a unit and excluded from the team target
 
 -- 1.7.2.5 --
 
-- The RMA label now fills the space it has: the model line and the problem/solution text grow when there is less text to print, instead of staying small. The model only keeps the larger size while the problem/solution text still fits at its normal size
-- RMA Mode now also finds units by NAV code: type it into the same box as a serial and press Search, and the units registered under that code are listed newest first, so the one on the bench can be picked when its serial cannot be read. Requires the current relay package
-- RMA Mode has a clear button next to Search, which empties the whole form and puts the cursor back in the serial box, instead of the fields having to be cleared one by one
-- An available update no longer locks Repair Database. The form now only locks for an update that is marked as required, so an ordinary release can be installed at the end of a unit instead of stopping work the moment it appears
+- The RMA label now grows its text to fill the space instead of staying small
+- RMA Mode now finds units by NAV code, listed newest first. Requires the current relay package
+- Added a clear button next to Search in RMA Mode
+- An ordinary update no longer locks Repair Database, only a required one does
 
 -- 1.7.2 --
 
-- The sound test no longer plays its tone after the window has been closed, and the microphone is released properly when the window is closed while it is still starting up
-- The database log now opens as proper columns in Excel instead of everything landing in one cell. Entries written in the old format are removed the first time a repair is saved after this update
-- Settings now has a Check for updates button, which checks straight away and offers to install anything newer
-- Load now falls back to RIS when a serial is not in the shared database, instead of clearing the form without any lookup
-- The program now reopens on the monitor it was closed on, in the same position and size, and stays maximised if it was maximised
-- Search results in RIS mode now show the corrected unit after a save, instead of the version from before the correction until the program was restarted
-- A forced update now shows the patch notes of the version being installed, so it is clear what is being fixed, instead of only stating that an update is required
-- Search results in Repair Database are now a single line per unit with columns for serial, model, status, result and date, so around fourteen units fit on screen instead of three
-- The unit under the pointer or the selection now has its INOR, reject reason, actions taken and materials used shown in a panel below the results, instead of every result carrying all of that text
-- Search results can now be worked from the keyboard: arrows move the selection, Enter loads the selected unit, Escape closes the results
-- Clicking the search box with nothing typed now lists every unit it searches, instead of showing nothing until something is typed
-- The blue help marks next to Reject Reason, Actions Taken and Materials Used shrink once their help has been shown, so they stay reachable without drawing attention
-- RIS search now recovers on its own after the connection comes back, instead of staying dead until the program was restarted. It also says why nothing is listed - loading, no connection, or nothing saved today - instead of spinning silently
-- Print Label now asks for confirmation before printing, in both Repair Database and RMA Mode, and states what is about to go on the label, so a stray click no longer sends a label to the printer
+- Fixed the sound test playing its tone after the window was closed, and the microphone not being released
+- The database log now opens as proper columns in Excel instead of one cell
+- Added a Check for updates button to Settings
+- Load now falls back to RIS when a serial is not in the shared database
+- The program reopens on the monitor, position and size it was closed on
+- Search results in RIS mode now show the corrected unit straight after a save
+- A forced update now shows the patch notes of the version being installed
+- Search results are now one line per unit with columns, about fourteen on screen instead of three
+- The selected unit's INOR, reject reason, actions taken and materials used show in a panel below the results
+- Search results can be worked from the keyboard: arrows move, Enter loads, Escape closes
+- Clicking the search box with nothing typed now lists every unit
+- The blue help marks shrink once their help has been shown
+- RIS search now recovers on its own after the connection comes back, and says why nothing is listed
+- Print Label now asks for confirmation, in Repair Database and in RMA Mode
 
 -- 1.7.1 --
 
-- Fixed garbled characters appearing in place of dashes, both in the previous-day rank tooltip on the leaderboard and in this What's New window
-- The team target no longer repeats how many are left, which the figures next to it already showed. It now only says how many the team is over the target, once it gets there
-- Desktop Mode and RMA Mode can now be switched to directly from one another in Account, instead of the other switch being hidden
-- Switching mode now offers to restart the program straight away, instead of only telling you a restart is needed
-- A battery reporting over 100% health now shows that figure, marked as an invalid reading in red, instead of being reported as UNKNOWN
-- Fixed the battery check running every second instead of every 30 seconds whenever the health could not be read
-- Fixed the Repair Database form occasionally ignoring a typed serial entirely, with no lookup and no message, until the program was restarted
-- Load now states why a serial could not be looked up, instead of always reporting it as missing from RIS
-- Relay connections are now renewed periodically, so restarting the relay no longer requires restarting the program
-- The updater window now sizes itself to what it is showing, instead of leaving empty space below the progress bar
-- Long error messages in the updater are no longer cut off at the edge of the window
-- Toned down the rank background colours on the leaderboard, most noticeably on bronze and silver
-- The previous-day rank mark now uses a separate shape for each of the nine ranks, so ranks can be told apart without relying on colour
+- Fixed garbled characters in place of dashes on the leaderboard tooltip and in this window
+- The team target now only says how many the team is over, once it gets there
+- Desktop Mode and RMA Mode can now be switched to directly from one another
+- Switching mode now offers to restart the program straight away
+- A battery reporting over 100% health now shows that figure in red instead of UNKNOWN
+- Fixed the battery check running every second when the health could not be read
+- Fixed Repair Database occasionally ignoring a typed serial until the program was restarted
+- Load now states why a serial could not be looked up
+- Relay connections are now renewed periodically, so restarting the relay no longer needs a restart here
+- The updater window now sizes itself to what it shows
+- Fixed long error messages being cut off in the updater
+- Toned down the rank background colours on the leaderboard
+- The previous-day rank mark now uses a separate shape for each of the nine ranks
 
 -- 1.7 --
 
-- Supervisors and above can now produce a performance report from Account: pick the technicians and a period, or a single day, and get an Excel workbook with each person's totals, daily average, best day and share of the team
-- Added Challenger, a new top rank at 50 units, in white on black
-- The team target bar now carries its own rank, changing colour as the team closes on the target and again as it goes past, up to challenger at 75 units over
-- The team target bar is taller, and says how many are left or how many over
-- RMA Mode now shows the same warning about a planned break in the RIS connection that Repair Database does
-- The search box at the top now says what it searches, so it is clear that in RIS mode it covers only the units you saved today
+- Supervisors and above can produce a performance report from Account as an Excel workbook
+- Added Challenger, a new top rank at 50 units
+- The team target bar now carries its own rank, changing colour up to challenger at 75 over
+- The team target bar is taller and says how many are left or over
+- RMA Mode now shows the planned RIS break warning, the same as Repair Database
+- The search box now says what it searches
 - Fixed the buttons in Account overlapping the name and company on a narrow window
 - Fixed the pinned posts column scrolling the board instead of itself
-- Fixed the unit instructions panel not scrolling when there was more than fits on screen
+- Fixed the unit instructions panel not scrolling
 - Fixed RMA units counter
 
 -- 1.6.9 --
 
-- Load now accepts the greyed-out serial suggestion instead of quietly looking up your own machine and appearing to do nothing
-- Load now says so when RIS has no record for a serial, rather than leaving you wondering whether the button worked
-- Typing a new serial and tabbing on now clears the previous unit's details first, so two units can no longer end up mixed in one form
-- A planned break in the RIS connection is now announced in the program: a bar appears above the form counting down, so there is time to finish and save the unit in hand
-- When a unit instruction appears, the fields that brought it up are outlined in amber, so it is clear what about this unit triggered it
-- A model on an instruction no longer has to be the full name: "ZBook" now reaches every ZBook, and "840 G7" reaches the EliteBook 840 G7
-- The mouse test is easier to read: the buttons are outlined, instead of dark grey on dark grey
-- RIS Database now follows whoever is signed in: signing in with an account that has no RIS technician switches Repair Database back to the shared database and says so, instead of leaving lookups failing for no visible reason. It comes back on its own when an account with RIS access signs in again
-- Signing in or out now clears whatever the previous person had half-written in Repair Database, so nobody inherits someone else's unit
-- Licence keys have been rebuilt from scratch and are now signed, so they cannot be forged or edited. Everyone needs the new key they were given; the old one will no longer be accepted
-- A licence now proves itself without the internet, so an expired one is recognised straight away rather than only when a connection happens to be available
+- Load now accepts the greyed-out serial suggestion instead of looking up your own machine
+- Load now says when RIS has no record for a serial
+- Typing a new serial and tabbing on now clears the previous unit first
+- A planned break in the RIS connection is now announced by a counting-down bar above the form
+- The fields that brought up a unit instruction are now outlined in amber
+- A model on an instruction no longer has to be the full name
+- The mouse test buttons are now outlined instead of dark grey on dark grey
+- RIS Database now follows whoever is signed in, and says when an account has no RIS technician
+- Signing in or out now clears whatever the previous person had half-written
+- Licence keys are now signed and cannot be forged. Everyone needs the new key they were given
+- A licence now proves itself without the internet
 
 -- 1.6.8.2 --
 
-- The team leaderboard now has a full ladder: bronze at 5 units, silver at 10, gold at 15, platinum at 20, emerald at 25, diamond at 30, mystic at 35 and grandmaster at 40, each with its own colour and glow
-- The top three ranks - diamond, mystic and grandmaster - stand out further, with a heavier edge and a deeper, faster glow
-- Each technician now carries a small gem showing the rank they finished the previous working day on, so Monday shows Friday
+- The team leaderboard now has a full ladder from bronze at 5 units to grandmaster at 40, each with its own colour and glow
+- Diamond, mystic and grandmaster stand out further, with a heavier edge and deeper glow
+- Each technician now carries a gem showing the rank they finished the previous working day on
 
 -- 1.6.8.1 --
 
 - RAM and Memory on a post now take several values, separated by commas
-- A post can now be set to match either RAM or Memory instead of both, so a reminder about a disk no longer disappears when the RAM does not fit
-- RMA Mode can now duplicate an entry for a second, identical unit: everything is kept and only the serial and case number are cleared, instead of searching a new serial and losing it all
+- A post can now match either RAM or Memory instead of both
+- RMA Mode can now duplicate an entry for a second identical unit, clearing only serial and case number
 
 -- 1.6.8 --
 
-- Added RIS info to Repair Database, showing everything RIS holds about the serial in the box: the full specification, status, reject reason, who registered it and when, and who last saved its repair (requires the relay update)
-- A unit that has been through the plant before is flagged as such, with its earlier passes listed underneath
-- A post can now name several order numbers and several models at once, instead of one of each
-- A post can also be limited to a repair status, a RAM size or a storage size, so a reminder can be aimed at units going to broker sales with a particular disk
-- Those settings moved into their own section in the post window, kept closed unless they are in use
+- Added RIS info to Repair Database, showing everything RIS holds about the serial. Requires the relay update
+- A unit that has been through the plant before is flagged, with its earlier passes listed
+- A post can now name several order numbers and several models at once
+- A post can also be limited to a repair status, a RAM size or a storage size
+- Those settings moved into their own section in the post window, closed unless in use
 - Instructions now appear as the repair is filled in, not only when the serial is loaded
-- Every repair written to RIS is now logged to LDT_DatabaseLog next to the program, in one growing spreadsheet showing who saved what and when
+- Every repair written to RIS is now logged to LDT_DatabaseLog next to the program
 - The database log folder can be pointed somewhere else in Settings
 - Removed Print Report from Repair Database
 - Removed the label preview from RMA Mode
-- The program is about 24 MB smaller, and updating clears the files it no longer needs out of the installation
-- A failed update now offers Try again without having to reopen the program, and can still start it as it was
-- Updating and installing now retry a download that drops out, instead of giving up on the whole thing
+- The program is about 24 MB smaller, and updating clears the files it no longer needs
+- A failed update now offers Try again without reopening the program
+- Updating and installing now retry a download that drops out
 - Installing no longer reports a failure when only an extra tool could not be downloaded
 - An extra tool that fails to unpack no longer leaves the previous copy deleted
-- Updating and installing now clear the working folders they used to leave behind, and check free space on the drive they download to
+- Updating and installing now clean up their working folders and check free space
 
 -- 1.6.7 --
 
-- A post can now be attached to an order number, a model or both, and then replaces the leaderboard in Repair Database whenever a matching unit is opened, until that unit is saved
+- A post can now be attached to an order number, a model or both, and replaces the leaderboard when a matching unit is opened
 - Posts carrying instructions now say so on the board, along with what they are attached to
 - Deleting a post now deletes its replies as well
-- Repair Database now keeps what has been typed when moving between tabs, the same as RMA Mode
-- Fixed model names printing on top of themselves on RMA labels, and a model breaking onto a second line for no visible reason
-- Reject Reason no longer autofills from RIS with slash separated entries, which are not our format
+- Repair Database now keeps what has been typed when moving between tabs
+- Fixed model names printing on top of themselves on RMA labels
+- Reject Reason no longer autofills from RIS with slash separated entries
 - Fixed the menu background stopping part way down the side of the window
 
 -- 1.6.6.1 --
 
-- Added Send feedback to the menu, for reporting a problem or suggesting an improvement
-- Updating an existing entry in RMA Mode now keeps its original date instead of today's
+- Added Send feedback to the menu
+- Updating an entry in RMA Mode now keeps its original date instead of today's
 
 -- 1.6.6 --
 
-- Print Label in Repair Database now prints a reject label directly, instead of a PDF
-- The reject label carries the reject reason, PNR and ProductionOrderLineID from RIS, with barcoded serial and order number, and space to add reasons by hand
+- Print Label in Repair Database now prints a reject label directly instead of a PDF
+- The reject label carries the reject reason, PNR and ProductionOrderLineID from RIS, with barcoded serial and order number
 - Added the label printer address to Settings
 - A "/" left at the end of Actions Taken or Materials Used is now removed
-- Fixed the PNR never reaching the reject label (requires the relay update)
+- Fixed the PNR never reaching the reject label. Requires the relay update
 - RIS technician and RMA operator names can now be set while creating a user
 - Everything on an RMA label now shrinks to fit, so nothing overlaps
 - The status line on RMA labels is bigger
 - Fixed the end of a long model name printing over its own beginning on RMA labels
-- Fixed a long problem description running over the serial barcode and the case number
+- Fixed a long problem description running over the serial barcode and case number
 - Fixed Repair Database search staying empty in RIS mode when the tab was opened before the connection was up
 - Repair Database now reloads on its own once the connection comes back
-- Load now says when there is no connection, instead of clearing the form as if the serial were new
+- Load now says when there is no connection instead of clearing the form
 
 -- 1.6.5 --
 
-- RMA Mode can now print a label for a repaired, broker or scrapped unit straight from the entry, filled in from the record and sent directly to the label printer
-- Added a preview of the RMA label, so its layout can be checked before anything is printed
-- RMA Mode can now be set to the label size loaded in the printer, 100 x 50 mm or 80 x 40 mm, with everything on the label scaling to fit
-- Added a security check that requires an internet connection if the program has been unable to reach the internet for a long time
-- RMA Mode now picks the worksheet from a list of the sheets found in the selected workbook, instead of having its name typed in by hand
-- The Solution field in RMA Mode is now only shown for repaired units, where it applies
-- Broker specifications not found in RIS are now filled in as FALSE, and a missing optical drive as "no ODD", instead of being left blank
-- When RIS has a Reject Reason, Actions Taken or Materials Used written in a different format, a note under the field now says so and shows what RIS had, instead of the field silently staying empty
-- The Confirm button now shows that a record is being saved, so it is clear the save is in progress before the confirmation appears
-- Choosing the workbook or backup location in RMA Mode now shows that the file is being read, instead of appearing to freeze
-- The file scan in Settings now checks that the updater is present, without which the program cannot update itself and the Force Update fixes do nothing
-- The file scan in Settings now reports a worksheet name that is no longer in the selected workbook, instead of it only failing when an entry is saved
+- RMA Mode can now print a label for a repaired, broker or scrapped unit straight from the entry
+- Added a preview of the RMA label
+- RMA Mode can be set to 100 x 50 mm or 80 x 40 mm label stock, with everything scaling to fit
+- Added a security check requiring an internet connection after a long time offline
+- RMA Mode now picks the worksheet from a list instead of having its name typed in
+- The Solution field in RMA Mode is now only shown for repaired units
+- Broker specifications missing from RIS are now filled in as FALSE, and a missing optical drive as "no ODD"
+- A Reject Reason, Actions Taken or Materials Used that RIS holds in another format is now shown under the field
+- The Confirm button now shows that a record is being saved
+- Choosing the workbook or backup location in RMA Mode now shows that the file is being read
+- The file scan in Settings now checks that the updater is present
+- The file scan in Settings now reports a worksheet name no longer in the selected workbook
 - Label previews no longer pile up in the temporary folder
-- Records can no longer be saved with nothing in them but a serial number
-- Fixed RIS statistics and RIS search not working until the program was restarted, after logging in on a fresh installation
-- Fixed Actions Taken and Materials Used not autofilling from RIS on a fresh installation, where entries written in our format were treated as if they were not
-- Fixed Reject Reason autofilling from RIS with entries that only looked like our format, such as comma separated lists
-- Removed the "Matching entries" counter outside the shared Repair Database, where it overlapped other elements
+- Records can no longer be saved with nothing but a serial number
+- Fixed RIS statistics and search not working until restart on a fresh installation
+- Fixed Actions Taken and Materials Used not autofilling from RIS on a fresh installation
+- Fixed Reject Reason autofilling from RIS with entries that only looked like our format
+- Removed the "Matching entries" counter outside the shared Repair Database
 
 -- 1.6.4 --
 
-- Diagnostics now opens noticeably faster, both at startup and when switching back to it
-- Service Board and Account now switch faster when moving between tabs
-- Reject Reason, Actions Taken and Materials Used now autofill from RIS when an existing record has them written in our format
-- RIS Database now has a search bar to find and reopen a repair you logged today, shown as the same cards used elsewhere in the app
-- Added a Settings screen in Account, with an option to reset learned autocomplete suggestions
-- Settings can now scan for missing or corrupted files the program depends on, with a one-click fix for each problem found, from its own Diagnostics window
-- Fixed old data staying in the Index, Order Number, Model and other fields after loading a repair and then typing a new serial
-- The RIS Database info screen now only appears when you click "Enable RIS Database" for the first time, instead of right after opening Repair Database
-- The team leaderboard now shows more entries before scrolling is needed
-- The program no longer logs you out on its own -- a saved login now stays valid until you log out yourself
+- Diagnostics now opens noticeably faster, at startup and when switching back to it
+- Service Board and Account now switch faster
+- Reject Reason, Actions Taken and Materials Used now autofill from RIS when written in our format
+- RIS Database now has a search bar to find and reopen a repair logged today
+- Added a Settings screen in Account, with an option to reset learned suggestions
+- Settings can now scan for missing or corrupted files, with a one-click fix for each
+- Fixed old data staying in Index, Order Number and Model after typing a new serial
+- The RIS Database info screen now only appears when Enable RIS Database is first clicked
+- The team leaderboard now shows more entries before scrolling
+- The program no longer logs you out on its own
 
 -- 1.6.3 --
 
-- Supervisors can now pin and unpin posts from Basic users, and Moderators can do the same for Supervisor and Basic posts
-- Fixed the gold highlight on the team leaderboard being cut off at the edges
+- Supervisors can now pin and unpin Basic posts, and Moderators can do the same for Supervisor and Basic posts
+- Fixed the gold highlight on the leaderboard being cut off at the edges
 - Fixed User Management wrongly listing "Repair" as a protected group name
-- Fixed the Touch Test button on Diagnostics sometimes not appearing at startup on touch-enabled devices
-- Fixed the cursor jumping to the end of Reject Reason, Actions Taken and Materials Used when editing an earlier word instead of typing at the end
-- Fixed Reject Reason's autocomplete permanently stopping for the rest of the session after editing an earlier word and then typing a new one at the end
-- Repair Database now greys out without an internet connection, the same as Service Board and Account
-- Removed Guest mode from the Repair Database access screen -- it was no longer needed
-- Fixed Tab not being able to reach the "Enable RIS Database" button on the Repair Database access screen
+- Fixed the Touch Test button sometimes not appearing at startup on touch devices
+- Fixed the cursor jumping to the end when editing an earlier word in Reject Reason, Actions Taken or Materials Used
+- Fixed Reject Reason autocomplete stopping for the rest of the session after such an edit
+- Repair Database now greys out without an internet connection
+- Removed Guest mode from the Repair Database access screen
+- Fixed Tab not reaching the Enable RIS Database button
 
 -- 1.6.2.2 --
 
-- RMA Database now warns you when there is no connection to RIS, instead of looking like the device simply is not registered
+- RMA Database now warns when there is no connection to RIS, instead of looking like the device is not registered
 
 -- 1.6.2.1 --
 
-- Fixed the program closing unexpectedly when a technician on the team leaderboard reached the daily target
+- Fixed the program closing unexpectedly when a technician reached the daily target
 
 -- 1.6.2 --
 
-- Added RMA Mode, a dedicated version of the program for the RMA department, switched on in Account next to Desktop Mode
-- Reaching the daily target on the team leaderboard is now marked with an animated gold highlight
-- Desktop Mode and RMA Mode no longer start hardware-related background services, so the program opens faster and uses fewer resources
-- Fixed Service Board sometimes showing already-read posts as unread again
-- Fixed the Service Board notification dot sometimes not appearing at all for a genuinely new post or comment
+- Added RMA Mode, switched on in Account next to Desktop Mode
+- Reaching the daily target is now marked with an animated gold highlight
+- Desktop Mode and RMA Mode no longer start hardware background services, so the program opens faster
+- Fixed Service Board sometimes showing read posts as unread again
+- Fixed the Service Board notification dot sometimes not appearing for a new post or comment
 - Fixed the app logo being slightly cropped
 
 -- 1.6.1 --
 
-- Desktop Mode's exit confirmation now shows a simple "Close Program" / "Close this window" choice instead of the full shutdown/restart menu
-- The program now checks for updates periodically in the background, not just at startup, so new updates (especially critical ones) get noticed much sooner
-- Added a small "ⓘ" icon next to the version number that lets you reopen the What's New screen at any time
-- Fixed closing the What's New screen in Desktop Mode opening Diagnostics instead of Repair Database
-- Fixed the Autopilot status on the Diagnostics screen sometimes getting stuck on "No Network" after switching tabs, even once the internet was back
-- Fixed pressing Escape not opening the exit confirmation dialog while typing in a Repair Database field
+- Desktop Mode's exit confirmation now offers Close Program / Close this window instead of the full menu
+- The program now checks for updates periodically, not only at startup
+- Added an "ⓘ" icon next to the version number to reopen What's New
+- Fixed closing What's New in Desktop Mode opening Diagnostics instead of Repair Database
+- Fixed the Autopilot status getting stuck on "No Network" after switching tabs
+- Fixed Escape not opening the exit confirmation while typing in a Repair Database field
 
 -- 1.6 --
 
 - New app icon
-- Repair Database no longer pre-fills the Serial field with this computer's own serial number in Desktop Mode
+- Repair Database no longer pre-fills Serial with this computer's own serial in Desktop Mode
 - Text in Service Board posts and comments can now be selected and copied
-- Hovering a pinned Service Board post now shows the full post, just like in the main feed.
-- Comments on Service Board posts are now collapsed by default with a working show/hide button, plus a separate "Reply" button to write a new one.
-- Repair Database's Repair Status list now includes "Waiting for parts", counted toward the leaderboard the same way as Broker/Scrap
-- Team leaderboard now gives 1st/2nd/3rd place gold/silver/bronze numbers
-- Leaderboard now shows your LDT account nickname instead of your RIS name, if you have an LDT account
-- Added a daily team target bar to the leaderboard (15 repairs per technician) that turns gold once the team hits it
-- A technician's row on the leaderboard turns gold once they personally reach 15 repaired+broker/scrap for the day
-- Fixed Repair Database occasionally showing a phantom scrollbar on large screens
-- Fixed editing a Service Board post resetting its publish date and dropping it to the bottom of the feed
-- Fixed Service Board and Account team list sometimes showing empty right after opening, or right after posting/deleting something - caused by hitting Google's request limits, should now be far more reliable
-- Fixed an occasional "403 Forbidden" error when saving a repair to the RIS database
-- Fixed Camera Test sometimes freezing the whole program when switching away from it while the camera was running
-- Fixed the R/B/P column labels above the team leaderboard being slightly misaligned with their columns
-- Camera Test now shows the picture as soon as it's actually ready instead of always waiting a fixed few seconds
+- Hovering a pinned post now shows the full post
+- Comments are now collapsed by default, with a Reply button to write a new one
+- Repair Status now includes "Waiting for parts", counted like Broker/Scrap
+- The leaderboard now gives gold, silver and bronze numbers to the top three
+- The leaderboard now shows your LDT nickname instead of your RIS name
+- Added a daily team target bar at 15 repairs per technician
+- A technician's row turns gold at 15 repaired plus broker/scrap for the day
+- Fixed a phantom scrollbar in Repair Database on large screens
+- Fixed editing a post resetting its publish date
+- Fixed Service Board and the team list sometimes showing empty after opening or posting
+- Fixed an occasional "403 Forbidden" when saving a repair to RIS
+- Fixed Camera Test freezing the program when switching away with the camera running
+- Fixed the R/B/P column labels being misaligned
+- Camera Test now shows the picture as soon as it is ready instead of waiting a fixed few seconds
 
 -- 1.5.9.1 --
 
-- Team leaderboard in RIS Database now shows tied technicians with the same rank instead of an arbitrary order
-- The "All" column in the leaderboard is now "Points", showing each technician's score directly
-- The leaderboard now refreshes automatically every 10 seconds while Repair Database is open, so everyone sees new repairs without reopening the tab
+- Tied technicians on the leaderboard now share a rank instead of an arbitrary order
+- The "All" column is now "Points", showing each technician's score directly
+- The leaderboard now refreshes every 10 seconds while Repair Database is open
 
 -- 1.5.9 --
 
-- Fixed laptops sometimes showing "Offline" right after starting even with internet working, especially on freshly-installed machines - the program now tries to fix it automatically instead of needing a cable unplug/replug
-- New Desktop Mode (toggle in Account) - turns the program into a dedicated Repair Database terminal, hiding Diagnostics, Script Library and Utilities, with shortcuts and battery info adjusted to match, and a clear "Desktop Mode" label
-- Fixed the diagnostic test buttons briefly flashing on screen right at startup in Desktop Mode, before Repair Database finished loading
-- Driver Update Tool now has an "Auto reset if needed" checkbox - if checked, it automatically restarts the computer when a driver install requires it
-- Fixed a bug where Trial mode could silently stop behaving like Trial after the first launch
-- Trial mode can no longer open Repair Database at all - shows the same "upgrade required" message as Account
-- The on-screen keyboard button can no longer be selected by pressing Tab
-- Team leaderboard in RIS Database now ranks fairly (a repaired unit counts for more than a broker/scrap one), shows everyone instead of just the top 3, and highlights the top 3; also fixed a bug where an unrecognized status could throw off the numbers shown
+- Fixed laptops showing "Offline" right after starting with the internet working, now corrected automatically
+- New Desktop Mode, turning the program into a dedicated Repair Database terminal
+- Fixed the test buttons flashing on screen at startup in Desktop Mode
+- Driver Update Tool now has an "Auto reset if needed" checkbox
+- Fixed Trial mode silently stopping behaving like Trial after the first launch
+- Trial mode can no longer open Repair Database
+- The on-screen keyboard button can no longer be reached with Tab
+- The leaderboard now ranks fairly, shows everyone instead of the top 3, and no longer miscounts unknown statuses
 
 -- 1.5.8 --
 
-- Added an on-screen keyboard shortcut button in Repair Database, so data can still be entered if the physical keyboard isn't working
-- Removed the Date field from Repair Database entirely - RAM/Memory now show in its place for both shared and RIS database access, and are saved and reloaded with the rest of the record
-- Fixed the network status indicator sometimes staying stuck on "Offline" after starting the computer with an Ethernet cable already connected, even though the internet was actually working
-- Screen Test now jumps to 100% brightness while it's open and restores your previous brightness when you close it
-- Microphone and speakers are now automatically unmuted when the program starts, and the fix is now more thorough so it actually catches the muted device
-- Fixed forced updates sometimes not showing the "Critical Update Required" prompt until the program was restarted a second time
-- Typing symbols like "@" (Shift+2) into text fields such as the Account username/password no longer accidentally triggers keyboard shortcuts and switches tabs
+- Added an on-screen keyboard button in Repair Database
+- Removed the Date field from Repair Database; RAM and Memory now show in its place
+- Fixed the network indicator staying on "Offline" after starting with Ethernet already connected
+- Screen Test now jumps to full brightness and restores the previous setting on close
+- Microphone and speakers are now unmuted at startup, and the fix now catches the muted device
+- Fixed forced updates not showing the prompt until the second restart
+- Typing symbols such as "@" no longer triggers keyboard shortcuts
 
 -- 1.5.7 --
 
-- RIS Database mode polished based on tester feedback: clearer messaging about what gets saved where, and the interface only shows what's actually relevant to that mode
-- RIS Database now shows RAM/storage info pulled from RIS, editable and saved back alongside the repair
-- Reject Reason / Actions Taken / Materials Used suggestions now work in RIS Database mode too, building up from your own past entries
-- RIS Database's stats panel now breaks down repairs into Repaired / Broker-Scrap / All, refreshes immediately after saving, and the Load button can pull data from RIS on demand
-- Repair Database automatically locks with a clear message if the RIS connection drops, instead of silently failing
-- Everyone gets a clean, consistent first-time experience with RIS Database after this update
+- RIS Database mode polished after tester feedback: clearer messages and only what is relevant to the mode
+- RIS Database now shows RAM and storage pulled from RIS, editable and saved back
+- Reject Reason, Actions Taken and Materials Used suggestions now work in RIS Database mode
+- The stats panel now breaks repairs into Repaired, Broker-Scrap and All, and refreshes after saving
+- Repair Database now locks with a clear message if the RIS connection drops
 
 -- 1.5.6 --
 
-- New RIS Database mode in Repair Database - available to accounts with a RIS technician assigned by an admin, letting repairs sync straight to RIS without needing shared database access
-- Removed the old "Local Database (beta)" option - replaced entirely by RIS Database mode
-- Repair Database shows a short one-time notice explaining how access works now, the first time you open it after this update
-- Manual technician selection is gone - repairs always sync under the technician name assigned to your account
-- If you don't see the RIS option even though you should have access, log out and back in once
+- New RIS Database mode, for accounts with a RIS technician assigned, syncing repairs straight to RIS
+- Removed the old Local Database (beta) option
+- Repair Database shows a one-time notice explaining how access works
+- Manual technician selection is gone; repairs sync under the technician assigned to your account
+- If the RIS option does not appear, log out and back in once
 
 -- 1.5.5 --
 
-- Change Password now requires your current password first - stops anyone at an unlocked session from hijacking an account by changing its password
-- Fixed error messages (wrong password, mismatched passwords, etc.) not being visible in the Change Password window
-- Fixed Camera Test occasionally freezing the entire app when closed quickly or switched while active
+- Change Password now requires the current password first
+- Fixed error messages not being visible in the Change Password window
+- Fixed Camera Test freezing the app when closed quickly or switched while active
 
 -- 1.5.4 --
 
-- Service Board completely redesigned - now looks and feels like a real chat: messages grouped by day ("Today"/"Yesterday"), replies/comments on posts (collapsed by default, expand with the Reply button), a "New Post" bar built right into the feed, and pinned posts are readable in full with a "Show more" option
-- Account profile completely redesigned - new profile card with a tier-colored banner, and a "Change Password" option now available any time (not just on first login)
-- Create Post and User Management windows redesigned to match, and the Target Groups list in Create Post no longer gets cut off when there are many groups
-- Fixed the technician dropdown in Repair Database not remembering/auto-selecting the last used technician
-- Cleaned up the updater's status text during updates
+- Service Board redesigned as a chat: messages grouped by day, replies collapsed by default, a New Post bar in the feed and readable pinned posts
+- Account profile redesigned, with Change Password available at any time
+- Create Post and User Management redesigned to match, and the Target Groups list no longer gets cut off
+- Fixed the technician dropdown not remembering the last used technician
+- Cleaned up the updater's status text
 
 -- 1.5.3 --
 
@@ -318,7 +328,7 @@
 
 -- 1.5.2 --
 
-- Drastically improved the update process, both visually and under the hood - progress bars now show real download progress, and updates only download the files that actually changed instead of the whole program
+- Updates now show real download progress and only download the files that changed
 - Various improvements and fixes to the RIS repair sync feature
 
 -- 1.5.1 --
@@ -480,7 +490,7 @@
 -- 1.1.8 --
 
 - Redesigned Driver Update window
-- Removed "Include quickspecs" checkbox – quickspecs are now automatically saved only when the entered serial matches the detected device serial; different serial = specs saved as "-"
+- Removed the Include quickspecs checkbox; specs are saved only when the entered serial matches the device
 - Removed green border from installed utility cards – only "Installed" text remains green, border stays default gray
 
 -- 1.1.7 --
@@ -565,7 +575,7 @@
 
 -- 1.0.5 --
 
-- Fixed progress bar behavior in Driver Update window – now smoothly transitions through phases: scanning (0-30%), downloading (30-60%), installing (60-95%), and completion (95-100%)
+- Fixed the progress bar in Driver Update jumping between phases
 - Added several security based features
 
 -- 1.0.4 --
@@ -593,7 +603,7 @@
 
 -- 1.0.0 --
 
-- Added Utilities tab with downloadable tools (Fan Control and OCCT now only, more coming in the future) – cards show installed status, download on demand with progress window
+- Added the Utilities tab with downloadable tools, showing installed status and downloading on demand
 - Utilities card icons are grayed out when tool not installed, fully visible when installed
 - Installer now includes optional utilities with checkbox selection
 - Installation progress bar now smoothly animates and shows real download size in MB
