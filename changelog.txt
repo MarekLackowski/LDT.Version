@@ -1,4 +1,10 @@
---> 1.7.6.5 <--
+--> 1.7.6.8 <--
+
+- Serial number and Solution in RMA Mode are now typed in capitals automatically
+- Print Label and Save to RMA workbook swapped places, with Print on top
+- Repair Status and Repair Result can now be cleared back to blank, instead of only ever offering a value once one has been chosen
+
+-- 1.7.6.5 --
 
 - A post on the Service Board can now carry up to four pictures: pick a file, paste a screenshot with Ctrl+V or drop a file on the window
 - Pictures show as thumbnails under the post and open full size on click, with arrows between them
