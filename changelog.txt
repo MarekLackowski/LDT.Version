@@ -5,6 +5,9 @@
 - Fixed Repair Database re-checking instructions and status contradictions multiple times over after switching tabs a few times
 - RMA Mode can now print a label for a unit marked Waiting, the same as Fixed, Broker and Scrap
 - Fixed the on-screen keyboard icon sitting low in its button, in Repair Database and on the database password screen
+- RMA Mode can now find a unit by its case number, alongside serial and NAV code
+- NAV code search results in RMA Mode are now listed oldest to newest
+- Duplicate for another unit in RMA Mode now sets the date to today
 
 -- 1.7.6.8 --
 
