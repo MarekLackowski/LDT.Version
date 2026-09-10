@@ -1,4 +1,12 @@
---> 1.7.6.8 <--
+--> 1.7.7 <--
+
+- Quick Repairs now shows as its own field under Team today, separate from the ranked leaderboard
+- Fixed Erase turning grey on hover instead of staying red
+- Fixed Repair Database re-checking instructions and status contradictions multiple times over after switching tabs a few times
+- RMA Mode can now print a label for a unit marked Waiting, the same as Fixed, Broker and Scrap
+- Fixed the on-screen keyboard icon sitting low in its button, in Repair Database and on the database password screen
+
+-- 1.7.6.8 --
 
 - Serial number and Solution in RMA Mode are now typed in capitals automatically
 - Print Label and Save to RMA workbook swapped places, with Print on top
