@@ -1,4 +1,9 @@
---> 1.7.7 <--
+--> 1.7.7.5 <--
+
+- A case number covering more than one unit now opens the same pick list as a NAV code search, instead of jumping straight to one of them
+- Logging in and sending feedback no longer go through the shared spreadsheet, so the program no longer carries any Google credentials
+
+-- 1.7.7 --
 
 - Quick Repairs now shows as its own field under Team today, separate from the ranked leaderboard
 - Fixed Erase turning grey on hover instead of staying red
