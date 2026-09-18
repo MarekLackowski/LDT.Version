@@ -1,4 +1,13 @@
---> 1.7.7.5 <--
+--> 1.7.7.6 <--
+
+- The program now puts less load on the machine while it runs
+- Fixed a failed save in RMA Mode replacing every earlier backup copy with the same unchanged file
+- RMA Mode now stops the save and reports it when the backup copy cannot be made
+- RMA Mode now keeps one backup copy per day for 14 days, alongside the five most recent
+- Quick Repairs moved below the team list, under the R/B/P headings
+- The program can now show a message from the supplier, including the reason when a licence is withdrawn
+
+-- 1.7.7.5 --
 
 - A case number covering more than one unit now opens the same pick list as a NAV code search, instead of jumping straight to one of them
 - Logging in and sending feedback no longer go through the shared spreadsheet, so the program no longer carries any Google credentials
