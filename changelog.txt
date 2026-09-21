@@ -1,4 +1,13 @@
---> 1.7.7.6 <--
+--> 1.7.8 <--
+
+- Added LDT Light: a portable version written to a USB stick from Account and usable in read-only mode, with the hardware tests, specification and driver install
+- Scrollable lists now show a slim scroll bar that fades in when you reach for it, so it is clear when a list continues below
+- Switching tabs now fades the new screen in instead of swapping it instantly
+- Colours and text sizes are now consistent across every screen
+- Icons are now drawn by the program, so they no longer change shape between machines
+- Removed the NEW tag next to Account
+
+-- 1.7.7.6 --
 
 - The program now puts less load on the machine while it runs
 - Fixed a failed save in RMA Mode replacing every earlier backup copy with the same unchanged file
